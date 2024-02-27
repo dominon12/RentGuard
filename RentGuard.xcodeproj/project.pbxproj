@@ -17,6 +17,8 @@
 		BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E742B8E43D30019199C /* AccountView.swift */; };
 		BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E772B8E44DF0019199C /* AuthView.swift */; };
 		BDDC8E7B2B8E46FD0019199C /* AuthGuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E7A2B8E46FD0019199C /* AuthGuardViewModel.swift */; };
+		BDDC8E7E2B8E486E0019199C /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = BDDC8E7D2B8E486E0019199C /* Auth0 */; };
+		BDDC8E802B8E49580019199C /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E7F2B8E49580019199C /* Auth0.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		BDDC8E742B8E43D30019199C /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		BDDC8E772B8E44DF0019199C /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		BDDC8E7A2B8E46FD0019199C /* AuthGuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuardViewModel.swift; sourceTree = "<group>"; };
+		BDDC8E7F2B8E49580019199C /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDC8E7E2B8E486E0019199C /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +71,7 @@
 				BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */,
 				BDDC8E602B8E3EB60019199C /* Assets.xcassets */,
 				BDDC8E622B8E3EB60019199C /* Preview Content */,
+				BDDC8E7F2B8E49580019199C /* Auth0.plist */,
 			);
 			path = RentGuard;
 			sourceTree = "<group>";
@@ -149,6 +154,9 @@
 			dependencies = (
 			);
 			name = RentGuard;
+			packageProductDependencies = (
+				BDDC8E7D2B8E486E0019199C /* Auth0 */,
+			);
 			productName = RentGuard;
 			productReference = BDDC8E592B8E3EB40019199C /* RentGuard.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +185,9 @@
 				Base,
 			);
 			mainGroup = BDDC8E502B8E3EB40019199C;
+			packageReferences = (
+				BDDC8E7C2B8E486E0019199C /* XCRemoteSwiftPackageReference "Auth0.swift" */,
+			);
 			productRefGroup = BDDC8E5A2B8E3EB40019199C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDC8E642B8E3EB60019199C /* Preview Assets.xcassets in Resources */,
+				BDDC8E802B8E49580019199C /* Auth0.plist in Resources */,
 				BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDDC8E7C2B8E486E0019199C /* XCRemoteSwiftPackageReference "Auth0.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDDC8E7D2B8E486E0019199C /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDDC8E7C2B8E486E0019199C /* XCRemoteSwiftPackageReference "Auth0.swift" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDDC8E512B8E3EB40019199C /* Project object */;
 }
