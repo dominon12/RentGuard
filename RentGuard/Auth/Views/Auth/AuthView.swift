@@ -23,7 +23,7 @@ struct AuthView: View {
                 .padding()
             
             Button {
-                login()
+                authManager.login()
             } label: {
                 Text("Authenticate")
             }
@@ -31,30 +31,6 @@ struct AuthView: View {
             .controlSize(.large)
             .tint(.accentColor)
         }
-    }
-}
-
-extension AuthView {
-    private func login() {
-        Auth0
-            .webAuth()
-            .scope("openid profile email offline_access")
-            .start { result in
-                switch result {
-                case .success(let credentials):
-                    // todo: create user in db
-                    print("Success: \(credentials)")
-                    let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
-                    let isStored = credentialsManager.store(credentials: credentials)
-                    print("Is stored: \(isStored)")
-                    if isStored {
-                        authManager.isAuthenticated = true
-                    }
-                case .failure(let error):
-                    // todo: show alert
-                    print("Failed with: \(error)")
-                }
-            }
     }
 }
 
