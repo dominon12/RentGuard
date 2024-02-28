@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct AuthGuard: View {
-    private var viewModel = AuthGuardViewModel()
+    @EnvironmentObject private var authManager: AuthManager
     
     var body: some View {
-        if viewModel.isAuthenticated {
+        if authManager.isAuthenticated {
             MainView()
         } else {
             AuthView()

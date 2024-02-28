@@ -16,9 +16,9 @@
 		BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E712B8E43BB0019199C /* PropertiesView.swift */; };
 		BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E742B8E43D30019199C /* AccountView.swift */; };
 		BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E772B8E44DF0019199C /* AuthView.swift */; };
-		BDDC8E7B2B8E46FD0019199C /* AuthGuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E7A2B8E46FD0019199C /* AuthGuardViewModel.swift */; };
 		BDDC8E7E2B8E486E0019199C /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = BDDC8E7D2B8E486E0019199C /* Auth0 */; };
 		BDDC8E802B8E49580019199C /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E7F2B8E49580019199C /* Auth0.plist */; };
+		BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E862B8F7D700019199C /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		BDDC8E712B8E43BB0019199C /* PropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesView.swift; sourceTree = "<group>"; };
 		BDDC8E742B8E43D30019199C /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		BDDC8E772B8E44DF0019199C /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		BDDC8E7A2B8E46FD0019199C /* AuthGuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuardViewModel.swift; sourceTree = "<group>"; };
 		BDDC8E7F2B8E49580019199C /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		BDDC8E862B8F7D700019199C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,11 @@
 		BDDC8E5B2B8E3EB40019199C /* RentGuard */ = {
 			isa = PBXGroup;
 			children = (
-				BDDC8E6A2B8E433C0019199C /* Screens */,
+				BDDC8E6B2B8E435E0019199C /* MainView.swift */,
+				BDDC8E732B8E43C10019199C /* Account */,
+				BDDC8E702B8E43AB0019199C /* Properties */,
+				BDDC8E6D2B8E436F0019199C /* Home */,
+				BDDC8E832B8F7CB40019199C /* Auth */,
 				BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */,
 				BDDC8E602B8E3EB60019199C /* Assets.xcassets */,
 				BDDC8E622B8E3EB60019199C /* Preview Content */,
@@ -82,19 +86,6 @@
 				BDDC8E632B8E3EB60019199C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BDDC8E6A2B8E433C0019199C /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				BDDC8E6B2B8E435E0019199C /* MainView.swift */,
-				BDDC8E792B8E46E50019199C /* AuthGuard */,
-				BDDC8E762B8E44CF0019199C /* Auth */,
-				BDDC8E6D2B8E436F0019199C /* Home */,
-				BDDC8E702B8E43AB0019199C /* Properties */,
-				BDDC8E732B8E43C10019199C /* Account */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		BDDC8E6D2B8E436F0019199C /* Home */ = {
@@ -133,9 +124,34 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */,
-				BDDC8E7A2B8E46FD0019199C /* AuthGuardViewModel.swift */,
 			);
 			path = AuthGuard;
+			sourceTree = "<group>";
+		};
+		BDDC8E832B8F7CB40019199C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8E852B8F7D550019199C /* Managers */,
+				BDDC8E842B8F7D3F0019199C /* Views */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BDDC8E842B8F7D3F0019199C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8E762B8E44CF0019199C /* Auth */,
+				BDDC8E792B8E46E50019199C /* AuthGuard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDDC8E852B8F7D550019199C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8E862B8F7D700019199C /* AuthManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,10 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
+				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
 				BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */,
-				BDDC8E7B2B8E46FD0019199C /* AuthGuardViewModel.swift in Sources */,
 				BDDC8E6F2B8E43A00019199C /* HomeView.swift in Sources */,
 				BDDC8E6C2B8E435E0019199C /* MainView.swift in Sources */,
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
