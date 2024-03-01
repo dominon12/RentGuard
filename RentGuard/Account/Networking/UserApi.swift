@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserApi: NetworkManager {
+@MainActor class UserApi: NetworkManager {
     static let path = "users/"
     
     static func create(_ payload: CreateUserDto) async throws {
@@ -26,9 +26,14 @@ class UserApi: NetworkManager {
         }
         
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (_, _) = try await URLSession.shared.data(for: request)
         } catch {
             throw NetworkError.requestFailed
         }
+    }
+    
+    static func current() async throws -> User {
+        let url = UserApi.path + "current"
+        return try await NetworkManager.requestWithAuth(urlPath: url, returnType: User.self)
     }
 }
