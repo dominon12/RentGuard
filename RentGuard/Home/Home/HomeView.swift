@@ -24,7 +24,7 @@ import SwiftUI
                     
                     PropsMap()
                     
-                    AlertsList()
+                    AlertsListView()
                 }
             }
             
