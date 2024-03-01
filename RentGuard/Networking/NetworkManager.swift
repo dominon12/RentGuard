@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 class NetworkManager {
     static let shared = NetworkManager()
     static let baseUrl = "http://localhost:3000/api/"

@@ -14,4 +14,16 @@ enum AlertListTab: String {
 
 final class AlertListViewModel: ObservableObject {
     @Published var selectedTab: AlertListTab = .today
+    @Published var alerts = [UserAlert]()
+    @Published var isLoading = false
+    
+    func getAlerts() async {
+        isLoading = true
+        do {
+            alerts = try await AlertsApi.getAlerts()
+        } catch {
+            
+        }
+        isLoading = false
+    }
 }

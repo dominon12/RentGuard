@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct LoadingView: View {
+    var scale: CGFloat = 2
+    
     var body: some View {
         ZStack {
             Color(.systemBackground)
                 .ignoresSafeArea()
             
             ProgressView()
-                .scaleEffect(2)
+                .scaleEffect(scale)
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-@MainActor class UserApi: NetworkManager {
+class UserApi: NetworkManager {
     static let path = "users/"
     
     static func create(_ payload: CreateUserDto) async throws {
