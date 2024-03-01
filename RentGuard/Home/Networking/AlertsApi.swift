@@ -7,11 +7,19 @@
 
 import Foundation
 
-@MainActor final class AlertsApi: NetworkManager {
+enum AlertListType: String {
+    case today = "today"
+    case next = "next"
+}
+
+@MainActor
+final class AlertsApi: NetworkManager {
     static let path = "alerts/"
     
-    static func getAlerts() async throws -> [UserAlert] {
+    static func getAlerts(type: AlertListType) async throws -> [UserAlert] {
         let url = path
-        return try await AlertsApi.requestWithAuth(urlPath: url, returnType: [UserAlert].self)
+        return try await AlertsApi.requestWithAuth(urlPath: url, 
+                                                   returnType: [UserAlert].self,
+                                                   query: [URLQueryItem(name: "type", value: type.rawValue)])
     }
 }

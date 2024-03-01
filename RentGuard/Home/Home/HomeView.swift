@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-@MainActor struct HomeView: View {
+@MainActor
+struct HomeView: View {
     private let viewModel = HomeViewModel()
     
     var body: some View {

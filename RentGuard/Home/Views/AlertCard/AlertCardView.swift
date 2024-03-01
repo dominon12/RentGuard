@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct AlertCard: View {
-    var title: String
-    var content: String
+struct AlertCardView: View {
+    var alert: UserAlert
     
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
@@ -24,11 +23,11 @@ struct AlertCard: View {
             }
             
             VStack(alignment: .leading) {
-                Text(title)
+                Text(alert.title)
                     .font(.headline)
                     .foregroundStyle(.secondary)
                 
-                Text(content)
+                Text(alert.content)
                     .font(.body)
             }
         }
@@ -41,6 +40,7 @@ struct AlertCard: View {
 }
 
 #Preview {
-    AlertCard(title: "Rent has not been paid",
-              content: "Marta Rodriguez had to pay you 890$ before 7th of October for the rent in av. Roentgen 7")
+    AlertCardView(alert: UserAlert(id: "",
+                                   title: "Rent has not been paid",
+                                   content: "Marta Rodriguez had to pay you 890$ before 7th of October for the rent in av. Roentgen 7"))
 }

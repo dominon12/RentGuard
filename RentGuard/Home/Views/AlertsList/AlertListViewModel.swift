@@ -7,22 +7,19 @@
 
 import Foundation
 
-enum AlertListTab: String {
-    case today = "today"
-    case next = "next"
-}
-
+@MainActor
 final class AlertListViewModel: ObservableObject {
-    @Published var selectedTab: AlertListTab = .today
+    @Published var selectedTab: AlertListType = .today
     @Published var alerts = [UserAlert]()
     @Published var isLoading = false
     
     func getAlerts() async {
         isLoading = true
         do {
-            alerts = try await AlertsApi.getAlerts()
+            alerts = try await AlertsApi.getAlerts(type: selectedTab)
+            print(alerts)
         } catch {
-            
+            print(error)
         }
         isLoading = false
     }

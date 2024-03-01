@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct UserAlert: Decodable {
+struct UserAlert: Decodable, Identifiable {
+    var id: String
     var title: String
     var content: String
-    var date: Date
 }

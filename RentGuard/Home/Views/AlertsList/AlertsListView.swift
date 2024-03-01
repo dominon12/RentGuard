@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct AlertsListView: View {
     @StateObject private var viewModel = AlertListViewModel()
     
@@ -14,29 +15,18 @@ struct AlertsListView: View {
         VStack {
             Picker("For what period of time do you want to see the alerts?",
                    selection: $viewModel.selectedTab) {
-                Text("Today").tag(AlertListTab.today)
+                Text("Today").tag(AlertListType.today)
                 
-                Text("Next").tag(AlertListTab.next)
+                Text("Next").tag(AlertListType.next)
             }
                    .pickerStyle(.segmented)
                    .padding(.bottom)
             
             ZStack {
                 VStack(spacing: 16) {
-//                    AlertCard(title: "Alquiler está por pagar",
-//                              content: "Marta Rodriguez tenia que haberte pagado 890$ hasta el dia 7 de octubre por el alquiler del piso en av. Roentgen")
-//                    
-//                    AlertCard(title: "Contrato finaliza pronto",
-//                              content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
-//                    
-//                    AlertCard(title: "Contrato finaliza pronto",
-//                              content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
-//                    
-//                    AlertCard(title: "Contrato finaliza pronto",
-//                              content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
-//                    
-//                    AlertCard(title: "Contrato finaliza pronto",
-//                              content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
+                    ForEach(viewModel.alerts) { alert in
+                        AlertCardView(alert: alert)
+                    }
                 }
                 
                 if viewModel.isLoading {
@@ -46,7 +36,7 @@ struct AlertsListView: View {
             }
         }
         .padding()
-        .task {
+        .task(id: viewModel.selectedTab) {
             await viewModel.getAlerts()
         }
     }
