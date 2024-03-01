@@ -11,9 +11,11 @@ import Observation
 @Observable @MainActor final class HomeViewModel {
     var user: User?
     
-    func getUser() {
-        Task {
+    func getUser() async {
+        do {
             user = try await UserApi.current()
+        } catch {
+            
         }
     }
 }

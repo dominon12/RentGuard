@@ -11,13 +11,23 @@ import SwiftUI
     private let viewModel = HomeViewModel()
     
     var body: some View {
-        VStack {
-            if viewModel.user != nil {
-                Text("Hi, \(viewModel.user!.name)")
-            }
+        VStack(alignment: .leading) {
+            Text("Hi, \(viewModel.user?.name ?? "")")
+                .font(.largeTitle)
+                .padding(.leading)
+            
+            Text("Here's your summary")
+                .font(.title)
+                .padding([.bottom, .leading])
+            
+            Rectangle()
+                .frame(width: .infinity, height: 250)
+                .background(.black)
+            
+            AlertsList()
         }
-        .onAppear {
-            viewModel.getUser()
+        .task {
+            await viewModel.getUser()
         }
     }
 }
