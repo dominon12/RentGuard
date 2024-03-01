@@ -32,7 +32,6 @@ struct AlertCard: View {
                     .font(.body)
             }
         }
-        .frame(width: .infinity)
         .padding()
         .cornerRadius(12)
         .background(.white)

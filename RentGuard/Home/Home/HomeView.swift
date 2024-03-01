@@ -11,20 +11,26 @@ import SwiftUI
     private let viewModel = HomeViewModel()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Hi, \(viewModel.user?.name ?? "")")
-                .font(.largeTitle)
-                .padding(.leading)
+        ZStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("Hi, \(viewModel.user?.name ?? "")")
+                        .font(.largeTitle)
+                        .padding(.leading)
+                    
+                    Text("Here's your summary")
+                        .font(.title)
+                        .padding([.bottom, .leading])
+                    
+                    PropsMap()
+                    
+                    AlertsList()
+                }
+            }
             
-            Text("Here's your summary")
-                .font(.title)
-                .padding([.bottom, .leading])
-            
-            Rectangle()
-                .frame(width: .infinity, height: 250)
-                .background(.black)
-            
-            AlertsList()
+            if viewModel.isLoading {
+                LoadingView()
+            }
         }
         .task {
             await viewModel.getUser()

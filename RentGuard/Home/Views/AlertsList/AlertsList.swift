@@ -19,17 +19,26 @@ struct AlertsList: View {
                 Text("Next").tag(AlertListTab.next)
             }
            .pickerStyle(.segmented)
-           .padding()
+           .padding(.bottom)
             
-            List {
+            VStack(spacing: 16) {
                 AlertCard(title: "Alquiler está por pagar",
                           content: "Marta Rodriguez tenia que haberte pagado 890$ hasta el dia 7 de octubre por el alquiler del piso en av. Roentgen")
                 
                 AlertCard(title: "Contrato finaliza pronto",
                           content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
+                
+                AlertCard(title: "Contrato finaliza pronto",
+                          content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
+                
+                AlertCard(title: "Contrato finaliza pronto",
+                          content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
+                
+                AlertCard(title: "Contrato finaliza pronto",
+                          content: "Contrato con Igor Akinin que alquila habitacion B finaliza pronto")
             }
-            .listStyle(.inset)
         }
+        .padding()
     }
 }
 

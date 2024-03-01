@@ -10,12 +10,15 @@ import Observation
 
 @Observable @MainActor final class HomeViewModel {
     var user: User?
+    var isLoading = false
     
     func getUser() async {
+        isLoading = true
         do {
             user = try await UserApi.current()
         } catch {
             
         }
+        isLoading = false
     }
 }
