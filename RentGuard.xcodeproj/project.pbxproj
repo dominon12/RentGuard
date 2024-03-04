@@ -33,6 +33,8 @@
 		BDDC8EAB2B9253720019199C /* PropsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EAA2B9253720019199C /* PropsMap.swift */; };
 		BDDC8EAE2B9253BA0019199C /* AlertsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EAD2B9253BA0019199C /* AlertsApi.swift */; };
 		BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB02B9253DB0019199C /* UserAlert.swift */; };
+		BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB92B9641280019199C /* PropertyCardView.swift */; };
+		BDDC8EBD2B9641680019199C /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EBC2B9641680019199C /* Property.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		BDDC8EAA2B9253720019199C /* PropsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropsMap.swift; sourceTree = "<group>"; };
 		BDDC8EAD2B9253BA0019199C /* AlertsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsApi.swift; sourceTree = "<group>"; };
 		BDDC8EB02B9253DB0019199C /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
+		BDDC8EB92B9641280019199C /* PropertyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCardView.swift; sourceTree = "<group>"; };
+		BDDC8EBC2B9641680019199C /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,9 @@
 		BDDC8E702B8E43AB0019199C /* Properties */ = {
 			isa = PBXGroup;
 			children = (
-				BDDC8E712B8E43BB0019199C /* PropertiesView.swift */,
+				BDDC8EBB2B9641600019199C /* Types */,
+				BDDC8EB32B9640C70019199C /* Views */,
+				BDDC8EB22B963FBE0019199C /* Screens */,
 			);
 			path = Properties;
 			sourceTree = "<group>";
@@ -142,7 +148,7 @@
 			children = (
 				BDDC8E922B8F8BA70019199C /* Types */,
 				BDDC8E8C2B8F8B240019199C /* Networking */,
-				BDDC8E8B2B8F8B110019199C /* Views */,
+				BDDC8E8B2B8F8B110019199C /* Screens */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -198,12 +204,12 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		BDDC8E8B2B8F8B110019199C /* Views */ = {
+		BDDC8E8B2B8F8B110019199C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BDDC8E742B8E43D30019199C /* AccountView.swift */,
+				BDDC8EB82B96410F0019199C /* Account */,
 			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		BDDC8E8C2B8F8B240019199C /* Networking */ = {
@@ -224,20 +230,12 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
-		BDDC8E992B90DBB10019199C /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				BDDC8E6E2B8E43A00019199C /* HomeView.swift */,
-				BDDC8E9A2B90DBBC0019199C /* HomeViewModel.swift */,
-			);
-			name = Home;
-			path = ../Home;
-			sourceTree = "<group>";
-		};
 		BDDC8E9C2B922DEF0019199C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BDDC8E992B90DBB10019199C /* Home */,
+				BDDC8EB52B9640ED0019199C /* Home */,
+				BDDC8E6E2B8E43A00019199C /* HomeView.swift */,
+				BDDC8E9A2B90DBBC0019199C /* HomeViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -297,6 +295,61 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EB02B9253DB0019199C /* UserAlert.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		BDDC8EB22B963FBE0019199C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EB72B9641020019199C /* Properties */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BDDC8EB32B9640C70019199C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EB42B9640D00019199C /* PropertyCard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDDC8EB42B9640D00019199C /* PropertyCard */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EB92B9641280019199C /* PropertyCardView.swift */,
+			);
+			path = PropertyCard;
+			sourceTree = "<group>";
+		};
+		BDDC8EB52B9640ED0019199C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BDDC8EB72B9641020019199C /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8E712B8E43BB0019199C /* PropertiesView.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		BDDC8EB82B96410F0019199C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8E742B8E43D30019199C /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		BDDC8EBB2B9641600019199C /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EBC2B9641680019199C /* Property.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -384,6 +437,7 @@
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
+				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
 				BDDC8E982B90DB130019199C /* User.swift in Sources */,
@@ -394,6 +448,7 @@
 				BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */,
 				BDDC8E962B8F8CEF0019199C /* NetworkError.swift in Sources */,
 				BDDC8EAE2B9253BA0019199C /* AlertsApi.swift in Sources */,
+				BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */,
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
 				BDDC8EA52B9232BE0019199C /* AlertListViewModel.swift in Sources */,
 				BDDC8E9B2B90DBBC0019199C /* HomeViewModel.swift in Sources */,

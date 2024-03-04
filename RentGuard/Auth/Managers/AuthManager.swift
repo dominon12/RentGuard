@@ -32,6 +32,7 @@ final class AuthManager: ObservableObject {
                             if didCreateUser {
                                 let isStored = self.credentialsManager.store(credentials: credentials)
                                 self.accessToken = credentials.accessToken
+                                print(credentials.accessToken)
                                 if isStored {
                                     self.isAuthenticated = true
                                 }
