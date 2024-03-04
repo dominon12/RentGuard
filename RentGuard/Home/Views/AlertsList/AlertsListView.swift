@@ -12,21 +12,26 @@ struct AlertsListView: View {
     @StateObject private var viewModel = AlertListViewModel()
     
     var body: some View {
-        VStack {
-            Picker("For what period of time do you want to see the alerts?",
-                   selection: $viewModel.selectedTab) {
-                Text("Today").tag(AlertListType.today)
+        ZStack {
+            VStack {
+                Picker("For what period of time do you want to see the alerts?",
+                       selection: $viewModel.selectedTab) {
+                    Text("Today").tag(AlertListType.today)
+                    
+                    Text("Next").tag(AlertListType.next)
+                }
+                       .pickerStyle(.segmented)
+                       .padding(.bottom)
                 
-                Text("Next").tag(AlertListType.next)
-            }
-                   .pickerStyle(.segmented)
-                   .padding(.bottom)
-            
-            ZStack {
                 VStack(spacing: 16) {
                     ForEach(viewModel.alerts) { alert in
                         AlertCardView(alert: alert)
                     }
+                }
+                
+                if viewModel.alerts.isEmpty {
+                    EmptyState(imageName: "empty-box", message: "There are no alerts.")
+                        .frame(height: 400)
                 }
                 
                 if viewModel.isLoading {
