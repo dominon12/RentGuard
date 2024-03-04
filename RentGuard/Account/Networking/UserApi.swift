@@ -11,7 +11,7 @@ class UserApi: NetworkManager {
     static let path = "users/"
     
     static func create(_ payload: CreateUserDto) async throws {
-        guard let url = URL(string: NetworkManager.baseUrl + UserApi.path) else {
+        guard let url = URL(string: UserApi.baseUrl + UserApi.path) else {
             throw NetworkError.invalidUrl
         }
         
@@ -34,6 +34,6 @@ class UserApi: NetworkManager {
     
     static func current() async throws -> User {
         let url = UserApi.path + "current"
-        return try await NetworkManager.requestWithAuth(urlPath: url, returnType: User.self)
+        return try await UserApi.requestWithAuth(urlPath: url, returnType: User.self)
     }
 }

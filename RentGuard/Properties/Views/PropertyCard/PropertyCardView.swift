@@ -14,7 +14,7 @@ struct PropertyCardView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(property.name)
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.semibold)
                 
                 Text(property.address)

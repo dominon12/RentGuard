@@ -35,6 +35,9 @@
 		BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB02B9253DB0019199C /* UserAlert.swift */; };
 		BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB92B9641280019199C /* PropertyCardView.swift */; };
 		BDDC8EBD2B9641680019199C /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EBC2B9641680019199C /* Property.swift */; };
+		BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EBF2B9647460019199C /* PropertiesApi.swift */; };
+		BDDC8EC22B9647C50019199C /* PropertiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC12B9647C50019199C /* PropertiesViewModel.swift */; };
+		BDDC8EC42B9649EB0019199C /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC32B9649EB0019199C /* EmptyState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		BDDC8EB02B9253DB0019199C /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
 		BDDC8EB92B9641280019199C /* PropertyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCardView.swift; sourceTree = "<group>"; };
 		BDDC8EBC2B9641680019199C /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		BDDC8EBF2B9647460019199C /* PropertiesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesApi.swift; sourceTree = "<group>"; };
+		BDDC8EC12B9647C50019199C /* PropertiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewModel.swift; sourceTree = "<group>"; };
+		BDDC8EC32B9649EB0019199C /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 		BDDC8E702B8E43AB0019199C /* Properties */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC8EBE2B9647380019199C /* Networking */,
 				BDDC8EBB2B9641600019199C /* Types */,
 				BDDC8EB32B9640C70019199C /* Views */,
 				BDDC8EB22B963FBE0019199C /* Screens */,
@@ -234,8 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EB52B9640ED0019199C /* Home */,
-				BDDC8E6E2B8E43A00019199C /* HomeView.swift */,
-				BDDC8E9A2B90DBBC0019199C /* HomeViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EA72B9251C40019199C /* LoadingView.swift */,
+				BDDC8EC32B9649EB0019199C /* EmptyState.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +332,8 @@
 		BDDC8EB52B9640ED0019199C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC8E6E2B8E43A00019199C /* HomeView.swift */,
+				BDDC8E9A2B90DBBC0019199C /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -334,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8E712B8E43BB0019199C /* PropertiesView.swift */,
+				BDDC8EC12B9647C50019199C /* PropertiesViewModel.swift */,
 			);
 			path = Properties;
 			sourceTree = "<group>";
@@ -352,6 +361,14 @@
 				BDDC8EBC2B9641680019199C /* Property.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		BDDC8EBE2B9647380019199C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EBF2B9647460019199C /* PropertiesApi.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +451,7 @@
 				BDDC8E8A2B8F8ACB0019199C /* NetworkManager.swift in Sources */,
 				BDDC8E8E2B8F8B310019199C /* UserApi.swift in Sources */,
 				BDDC8E9F2B922E0A0019199C /* AlertsListView.swift in Sources */,
+				BDDC8EC22B9647C50019199C /* PropertiesViewModel.swift in Sources */,
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
@@ -442,8 +460,10 @@
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
 				BDDC8E982B90DB130019199C /* User.swift in Sources */,
 				BDDC8E912B8F8B820019199C /* CreateUserDto.swift in Sources */,
+				BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */,
 				BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */,
 				BDDC8E6F2B8E43A00019199C /* HomeView.swift in Sources */,
+				BDDC8EC42B9649EB0019199C /* EmptyState.swift in Sources */,
 				BDDC8E6C2B8E435E0019199C /* MainView.swift in Sources */,
 				BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */,
 				BDDC8E962B8F8CEF0019199C /* NetworkError.swift in Sources */,

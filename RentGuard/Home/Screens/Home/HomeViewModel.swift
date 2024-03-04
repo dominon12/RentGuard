@@ -8,7 +8,9 @@
 import SwiftUI
 import Observation
 
-@Observable @MainActor final class HomeViewModel {
+@Observable 
+@MainActor
+final class HomeViewModel {
     var user: User?
     var isLoading = false
     
