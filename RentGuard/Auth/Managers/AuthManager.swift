@@ -15,7 +15,7 @@ final class AuthManager: ObservableObject {
     @AppStorage("accessToken") var accessToken: String?
     
     init() {
-        isAuthenticated = credentialsManager.canRenew()
+        isAuthenticated = credentialsManager.hasValid()
     }
     
     func login() {
