@@ -9,10 +9,10 @@ import Foundation
 import Observation
 
 @MainActor
-@Observable
-final class PropertiesViewModel {
-    var properties = [Property]()
-    var isLoading = false
+final class PropertiesViewModel: ObservableObject {
+    @Published var properties = [Property]()
+    @Published var isLoading = false
+    @Published var isShowingForm = false
     
     func getProperties() async {
         isLoading = true

@@ -9,7 +9,7 @@ import SwiftUI
 
 @MainActor
 struct PropertiesView: View {
-    private let viewModel = PropertiesViewModel()
+    @StateObject private var viewModel = PropertiesViewModel()
     
     var body: some View {
         NavigationStack {
@@ -35,11 +35,16 @@ struct PropertiesView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        
+                        viewModel.isShowingForm = true
                     } label: {
                         Text("Add")
                     }
                 }
+            }
+            .navigationDestination(isPresented: $viewModel.isShowingForm) {
+                PropertyFormView(
+                    viewModel: PropertyFormViewModel(
+                        isActive: $viewModel.isShowingForm))
             }
         }
         .task {

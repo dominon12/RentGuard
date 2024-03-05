@@ -18,4 +18,6 @@ struct Property: Decodable {
     var postalCode: String?
     var country: String?
     var registrationId: String?
+    var surface: String?
+    var price: String?
 }
