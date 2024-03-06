@@ -13,7 +13,8 @@ final class PropertiesApi: NetworkManager {
     
     static func getProperties() async throws -> [Property] {
         let url = path
-        return try await PropertiesApi.requestWithAuth(urlPath: url,
-                                                       returnType: [Property].self)
+        return try await PropertiesApi.makeRequest(urlPath: url,
+                                                   returnType: [Property].self,
+                                                   withAuth: true)
     }
 }

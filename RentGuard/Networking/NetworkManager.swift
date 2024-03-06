@@ -15,26 +15,45 @@ class NetworkManager {
     
     private init() {}
     
-    static func requestWithAuth<T>(urlPath: String,
-                                   returnType: T.Type,
-                                   query: [URLQueryItem] = []) async throws -> T where T : Decodable {
-        guard let accessToken else {
-            throw NetworkError.notAuthenticated
-        }
-        
+    static func makeRequest<T>(urlPath: String,
+                               returnType: T.Type,
+                               query: [URLQueryItem] = [],
+                               payload: Encodable? = nil,
+                               withAuth: Bool? = false) async throws -> T where T : Decodable {
+        // create request
         guard var url = URL(string: NetworkManager.baseUrl + urlPath) else {
             throw NetworkError.invalidUrl
         }
         url.append(queryItems: query)
-        
         var request = URLRequest(url: url)
-        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        // handle authentication
+        if withAuth != nil && withAuth == true {
+            guard let accessToken else {
+                throw NetworkError.notAuthenticated
+            }
+            request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        }
+        
+        // handle payload
+        if let payload {
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            do {
+                request.httpBody = try JSONEncoder().encode(payload)
+            } catch {
+                throw NetworkError.invalidRequestBody
+            }
+        }
         
         do {
+            // send request
             let (data, response) = try await URLSession.shared.data(for: request)
             print(response)
             
             do {
+                // parse response
                 let decoder = JSONDecoder()
                 let decodedResponse = try decoder.decode(returnType, from: data)
                 return decodedResponse
