@@ -7,20 +7,27 @@
 
 import SwiftUI
 
+@MainActor
 struct PropertyFormView: View {
     @ObservedObject var viewModel: PropertyFormViewModel
     
     var body: some View {
         NavigationStack {
-            Form {
-                PropertyDataFormView(form: $viewModel.form)
-                
-                Section(header: Text("Images")) {
-                    DynamicFormView(placeholder: "Image url", contentType: .URL, fields: $viewModel.form.images)
+            ZStack {
+                Form {
+                    PropertyDataFormView(form: $viewModel.form)
+                    
+                    Section(header: Text("Images")) {
+                        DynamicFormView(placeholder: "Image url", contentType: .URL, fields: $viewModel.form.images)
+                    }
+                    
+                    Section(header: Text("Documents")) {
+                        DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
+                    }
                 }
                 
-                Section(header: Text("Documents")) {
-                    DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
+                if viewModel.isSaving {
+                    LoadingView(opacity: 0.6)
                 }
             }
             .navigationTitle(viewModel.title)
@@ -28,7 +35,9 @@ struct PropertyFormView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        viewModel.save()
+                        Task {
+                            await viewModel.save()
+                        }
                     } label: {
                         Text("Save")
                     }

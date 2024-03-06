@@ -17,4 +17,12 @@ final class PropertiesApi: NetworkManager {
                                                    returnType: [Property].self,
                                                    withAuth: true)
     }
+    
+    static func create(payload: CreatePropertyDto) async throws {
+        let url = path
+        try await PropertiesApi.makeRequest(urlPath: url,
+                                            returnType: Property.self,
+                                            payload: payload,
+                                            withAuth: true)
+    }
 }

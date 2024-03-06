@@ -44,6 +44,7 @@
 		BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED12B9777790019199C /* DynamicFormView.swift */; };
 		BDDC8ED52B97823C0019199C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED42B97823C0019199C /* Alert.swift */; };
 		BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */; };
+		BDDC8EDA2B98D7C50019199C /* CreatePropertyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED92B98D7C50019199C /* CreatePropertyDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		BDDC8ED12B9777790019199C /* DynamicFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormView.swift; sourceTree = "<group>"; };
 		BDDC8ED42B97823C0019199C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAlerts.swift; sourceTree = "<group>"; };
+		BDDC8ED92B98D7C50019199C /* CreatePropertyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EBC2B9641680019199C /* Property.swift */,
+				BDDC8ED92B98D7C50019199C /* CreatePropertyDto.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */,
 				BDDC8E6F2B8E43A00019199C /* HomeView.swift in Sources */,
 				BDDC8EC42B9649EB0019199C /* EmptyState.swift in Sources */,
+				BDDC8EDA2B98D7C50019199C /* CreatePropertyDto.swift in Sources */,
 				BDDC8EC92B9767DB0019199C /* PropertyFormViewModel.swift in Sources */,
 				BDDC8E6C2B8E435E0019199C /* MainView.swift in Sources */,
 				BDDC8EC72B9766990019199C /* PropertyFormView.swift in Sources */,

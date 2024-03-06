@@ -16,6 +16,9 @@ final class AuthManager: ObservableObject {
     
     init() {
         isAuthenticated = credentialsManager.hasValid()
+        if let accessToken {
+            print(accessToken)
+        }
     }
     
     func login() {
@@ -29,13 +32,10 @@ final class AuthManager: ObservableObject {
                     DispatchQueue.main.async {
                         Task {
                             let didCreateUser = await self.createUserInDb(from: credentials.idToken)
-                            if didCreateUser {
-                                let isStored = self.credentialsManager.store(credentials: credentials)
-                                self.accessToken = credentials.accessToken
-                                print(credentials.accessToken)
-                                if isStored {
-                                    self.isAuthenticated = true
-                                }
+                            let isStored = self.credentialsManager.store(credentials: credentials)
+                            self.accessToken = credentials.accessToken
+                            if isStored {
+                                self.isAuthenticated = true
                             }
                         }
                     }

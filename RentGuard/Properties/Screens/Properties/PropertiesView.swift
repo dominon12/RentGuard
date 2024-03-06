@@ -47,9 +47,11 @@ struct PropertiesView: View {
                         isActive: $viewModel.isShowingForm))
             }
         }
-        .task {
-            await viewModel.getProperties()
-        }
+        .task(id: viewModel.isShowingForm, {
+            if !viewModel.isShowingForm {
+                await viewModel.getProperties()
+            }
+        })
     }
 }
 
