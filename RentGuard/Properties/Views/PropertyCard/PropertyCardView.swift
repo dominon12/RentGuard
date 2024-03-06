@@ -40,7 +40,7 @@ struct PropertyCardView: View {
                     .frame(width: 164, height: 188)
             }
         }
-        .frame(height: 188)
+        .frame(maxWidth: .infinity, maxHeight: 188)
         .padding()
         .cornerRadius(12)
         .background(.white)
