@@ -21,3 +21,21 @@ struct Property: Decodable {
     var surface: String?
     var price: String?
 }
+
+struct PropertyMockData {
+    static var sampleProperty = Property(_id: "",
+                                         name: "Test property",
+                                         address: "C/ Remolcador 6, 5",
+                                         images: [],
+                                         documents: [],
+                                         tenant: User(_id: "",
+                                                      email: "email@mail.com",
+                                                      name: "Jose Alvarez",
+                                                      role: .tenant),
+                                         city: "Valencia",
+                                         postalCode: "46009",
+                                         country: "Spain",
+                                         registrationId: nil,
+                                         surface: "57m2",
+                                         price: "100000")
+}

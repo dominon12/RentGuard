@@ -45,6 +45,13 @@
 		BDDC8ED52B97823C0019199C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED42B97823C0019199C /* Alert.swift */; };
 		BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */; };
 		BDDC8EDA2B98D7C50019199C /* CreatePropertyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED92B98D7C50019199C /* CreatePropertyDto.swift */; };
+		BDDC8EDD2B98E4040019199C /* PropertyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EDC2B98E4040019199C /* PropertyDetailsView.swift */; };
+		BDDC8EE02B98E5590019199C /* DataCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EDF2B98E5590019199C /* DataCardView.swift */; };
+		BDDC8EE32B98F0840019199C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE22B98F0840019199C /* CarouselView.swift */; };
+		BDDC8EE62B98F0BD0019199C /* PropertyDataCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE52B98F0BD0019199C /* PropertyDataCardView.swift */; };
+		BDDC8EE92B98F1470019199C /* TenantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE82B98F1470019199C /* TenantCardView.swift */; };
+		BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */; };
+		BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +93,13 @@
 		BDDC8ED42B97823C0019199C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAlerts.swift; sourceTree = "<group>"; };
 		BDDC8ED92B98D7C50019199C /* CreatePropertyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyDto.swift; sourceTree = "<group>"; };
+		BDDC8EDC2B98E4040019199C /* PropertyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsView.swift; sourceTree = "<group>"; };
+		BDDC8EDF2B98E5590019199C /* DataCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCardView.swift; sourceTree = "<group>"; };
+		BDDC8EE22B98F0840019199C /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		BDDC8EE52B98F0BD0019199C /* PropertyDataCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDataCardView.swift; sourceTree = "<group>"; };
+		BDDC8EE82B98F1470019199C /* TenantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCardView.swift; sourceTree = "<group>"; };
+		BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRentabilityView.swift; sourceTree = "<group>"; };
+		BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +338,7 @@
 		BDDC8EB22B963FBE0019199C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC8EDB2B98E3F00019199C /* PropertyDetails */,
 				BDDC8EC52B97668E0019199C /* PropertyForm */,
 				BDDC8EB72B9641020019199C /* Properties */,
 			);
@@ -333,6 +348,12 @@
 		BDDC8EB32B9640C70019199C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC8EED2B98F5E80019199C /* DeleteProperty */,
+				BDDC8EEA2B98F1EA0019199C /* PropertyRentability */,
+				BDDC8EE72B98F13A0019199C /* TenantCard */,
+				BDDC8EE42B98F0B10019199C /* PropertyDataCard */,
+				BDDC8EE12B98F07A0019199C /* Carousel */,
+				BDDC8EDE2B98E5510019199C /* DataCard */,
 				BDDC8ECD2B9776D30019199C /* PropertyDataForm */,
 				BDDC8ED02B97776B0019199C /* DynamicForm */,
 				BDDC8EB42B9640D00019199C /* PropertyCard */,
@@ -432,6 +453,62 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		BDDC8EDB2B98E3F00019199C /* PropertyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EDC2B98E4040019199C /* PropertyDetailsView.swift */,
+			);
+			path = PropertyDetails;
+			sourceTree = "<group>";
+		};
+		BDDC8EDE2B98E5510019199C /* DataCard */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EDF2B98E5590019199C /* DataCardView.swift */,
+			);
+			path = DataCard;
+			sourceTree = "<group>";
+		};
+		BDDC8EE12B98F07A0019199C /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EE22B98F0840019199C /* CarouselView.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		BDDC8EE42B98F0B10019199C /* PropertyDataCard */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EE52B98F0BD0019199C /* PropertyDataCardView.swift */,
+			);
+			path = PropertyDataCard;
+			sourceTree = "<group>";
+		};
+		BDDC8EE72B98F13A0019199C /* TenantCard */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EE82B98F1470019199C /* TenantCardView.swift */,
+			);
+			path = TenantCard;
+			sourceTree = "<group>";
+		};
+		BDDC8EEA2B98F1EA0019199C /* PropertyRentability */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */,
+			);
+			path = PropertyRentability;
+			sourceTree = "<group>";
+		};
+		BDDC8EED2B98F5E80019199C /* DeleteProperty */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */,
+			);
+			path = DeleteProperty;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,11 +589,14 @@
 				BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */,
 				BDDC8E8A2B8F8ACB0019199C /* NetworkManager.swift in Sources */,
 				BDDC8E8E2B8F8B310019199C /* UserApi.swift in Sources */,
+				BDDC8EE62B98F0BD0019199C /* PropertyDataCardView.swift in Sources */,
 				BDDC8E9F2B922E0A0019199C /* AlertsListView.swift in Sources */,
 				BDDC8EC22B9647C50019199C /* PropertiesViewModel.swift in Sources */,
+				BDDC8EE92B98F1470019199C /* TenantCardView.swift in Sources */,
 				BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */,
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
+				BDDC8EE02B98E5590019199C /* DataCardView.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
 				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
@@ -533,16 +613,20 @@
 				BDDC8EC72B9766990019199C /* PropertyFormView.swift in Sources */,
 				BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */,
 				BDDC8E962B8F8CEF0019199C /* NetworkError.swift in Sources */,
+				BDDC8EE32B98F0840019199C /* CarouselView.swift in Sources */,
 				BDDC8EAE2B9253BA0019199C /* AlertsApi.swift in Sources */,
 				BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */,
 				BDDC8ECF2B9776E30019199C /* PropertyDataFormView.swift in Sources */,
+				BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */,
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
+				BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */,
 				BDDC8EA52B9232BE0019199C /* AlertListViewModel.swift in Sources */,
 				BDDC8E9B2B90DBBC0019199C /* HomeViewModel.swift in Sources */,
 				BDDC8EA82B9251C40019199C /* LoadingView.swift in Sources */,
 				BDDC8E942B8F8BC20019199C /* Role.swift in Sources */,
 				BDDC8ED52B97823C0019199C /* Alert.swift in Sources */,
 				BDDC8EAB2B9253720019199C /* PropsMap.swift in Sources */,
+				BDDC8EDD2B98E4040019199C /* PropertyDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
