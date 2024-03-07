@@ -14,38 +14,36 @@ struct PropertyCardView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(property.name)
-                    .font(.title2)
+                    .font(.title3)
                     .fontWeight(.semibold)
                 
                 Text(property.address)
-                    .font(.body)
+                    .font(.subheadline)
                 
                 Spacer()
                 
                 Text(property.tenant?.name ?? "No tenant")
                     .font(.footnote)
             }
-            .padding(.trailing)
+            
+            Spacer()
             
             AsyncImage(url: URL(string: property.images.first ?? "")) { image in
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 164, height: 188)
+                    .frame(width: 150, height: 188)
                     .clipped()
             } placeholder: {
                 Image("property-img-placeholder")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 164, height: 188)
+                    .frame(width: 150, height: 188)
             }
+            .padding(.leading)
         }
-        .frame(maxWidth: .infinity, maxHeight: 188)
         .padding()
-        .cornerRadius(12)
-        .background(.white)
-        .clipped()
-        .shadow(radius: 2, x: 0, y: 2)
+        .frame(maxWidth: .infinity, maxHeight: 188)
     }
 }
 
