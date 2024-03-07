@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CreatePropertyDto: Encodable {
+struct SavePropertyDto: Encodable {
     var name: String
     var address: String
     var images: [String]

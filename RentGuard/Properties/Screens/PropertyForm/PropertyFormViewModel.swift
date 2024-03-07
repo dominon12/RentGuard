@@ -23,14 +23,16 @@ struct PropertyForm {
 
 @MainActor
 final class PropertyFormViewModel: ObservableObject {
-    var title = ""
+    let property: Property?
+    let refetch: () async -> Void
     @Binding var isActive: Bool
     @Published var form = PropertyForm()
     @Published var alert: AlertItem?
     @Published var isSaving = false
     
-    init(property: Property? = nil, isActive: Binding<Bool>) {
-        self.title = property != nil ? "Edit Property" : "Add Property"
+    init(property: Property? = nil, refetch: @escaping () async -> Void, isActive: Binding<Bool>) {
+        self.property = property
+        self.refetch = refetch
         self._isActive = isActive
         
         if let property {
@@ -58,7 +60,7 @@ final class PropertyFormViewModel: ObservableObject {
     func save() async {
         guard isValidForm else { return }
         
-        let payload = CreatePropertyDto(name: form.name,
+        let payload = SavePropertyDto(name: form.name,
                                         address: form.address,
                                         images: form.images.map({ field in field.value }),
                                         documents: form.documents.map({ field in field.value }),
@@ -70,14 +72,17 @@ final class PropertyFormViewModel: ObservableObject {
                                         price: form.price.isEmpty ? nil : form.price)
         
         isSaving = true
-        
         do {
-            try await PropertiesApi.create(payload: payload)
+            if let property {
+                try await PropertiesApi.update(id: property._id, payload: payload)
+            } else {
+                try await PropertiesApi.create(payload: payload)
+            }
+            await refetch()
             isActive = false
         } catch {
             alert = PropertiesAlerts.saveFailed
         }
-        
         isSaving = false
     }
 }

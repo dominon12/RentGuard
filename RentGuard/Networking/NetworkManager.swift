@@ -19,13 +19,15 @@ class NetworkManager {
                                returnType: T.Type,
                                query: [URLQueryItem] = [],
                                payload: Encodable? = nil,
-                               withAuth: Bool? = false) async throws -> T where T : Decodable {
+                               withAuth: Bool? = false,
+                               method: String? = "GET") async throws -> T where T : Decodable {
         // create request
         guard var url = URL(string: NetworkManager.baseUrl + urlPath) else {
             throw NetworkError.invalidUrl
         }
         url.append(queryItems: query)
         var request = URLRequest(url: url)
+        request.httpMethod = method
         
         // handle authentication
         if withAuth != nil && withAuth == true {
@@ -37,7 +39,6 @@ class NetworkManager {
         
         // handle payload
         if let payload {
-            request.httpMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             
             do {

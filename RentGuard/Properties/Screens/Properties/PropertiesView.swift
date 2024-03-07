@@ -17,7 +17,9 @@ struct PropertiesView: View {
                 List {
                     ForEach(viewModel.properties, id: \._id) { property in
                         NavigationLink(destination: {
-                            PropertyDetailsView(property: property).navigationTitle(property.name)
+                            PropertyDetailsView(property: property,
+                                                refetch: viewModel.getProperties)
+                                .navigationTitle(property.name)
                         }, label: {
                             PropertyCardView(property: property)
                         })
@@ -28,10 +30,6 @@ struct PropertiesView: View {
                 if viewModel.properties.isEmpty {
                     EmptyState(imageName: "empty-box",
                                message: "There are no properties yet.")
-                }
-                
-                if viewModel.isLoading {
-                    LoadingView()
                 }
             }
             .navigationTitle("Properties")
@@ -48,14 +46,14 @@ struct PropertiesView: View {
             .navigationDestination(isPresented: $viewModel.isShowingForm) {
                 PropertyFormView(
                     viewModel: PropertyFormViewModel(
-                        isActive: $viewModel.isShowingForm)).navigationTitle("Add Property")
+                        refetch: viewModel.getProperties,
+                        isActive: $viewModel.isShowingForm))
+                    .navigationTitle("Add Property")
             }
         }
-        .task(id: viewModel.isShowingForm, {
-            if !viewModel.isShowingForm {
-                await viewModel.getProperties()
-            }
-        })
+        .task {
+            await viewModel.getProperties()
+        }
     }
 }
 

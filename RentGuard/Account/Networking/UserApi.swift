@@ -12,11 +12,16 @@ class UserApi: NetworkManager {
     
     static func create(_ payload: CreateUserDto) async throws -> User {
         let url = UserApi.path
-        return try await UserApi.makeRequest(urlPath: url, returnType: User.self, payload: payload)
+        return try await UserApi.makeRequest(urlPath: url,
+                                             returnType: User.self,
+                                             payload: payload,
+                                             method: "POST")
     }
     
     static func current() async throws -> User {
         let url = UserApi.path + "current"
-        return try await UserApi.makeRequest(urlPath: url, returnType: User.self, withAuth: true)
+        return try await UserApi.makeRequest(urlPath: url, 
+                                             returnType: User.self,
+                                             withAuth: true)
     }
 }

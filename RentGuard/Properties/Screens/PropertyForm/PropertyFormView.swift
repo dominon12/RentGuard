@@ -50,5 +50,5 @@ struct PropertyFormView: View {
 
 #Preview {
     PropertyFormView(
-        viewModel: PropertyFormViewModel(isActive: .constant(true)))
+        viewModel: PropertyFormViewModel(refetch: {}, isActive: .constant(true)))
 }

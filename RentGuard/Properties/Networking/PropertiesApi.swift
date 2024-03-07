@@ -18,11 +18,21 @@ final class PropertiesApi: NetworkManager {
                                                    withAuth: true)
     }
     
-    static func create(payload: CreatePropertyDto) async throws {
+    static func create(payload: SavePropertyDto) async throws {
         let url = path
         try await PropertiesApi.makeRequest(urlPath: url,
                                             returnType: Property.self,
                                             payload: payload,
-                                            withAuth: true)
+                                            withAuth: true,
+                                            method: "POST")
+    }
+    
+    static func update(id: String, payload: SavePropertyDto) async throws {
+        let url = path + id
+        try await PropertiesApi.makeRequest(urlPath: url,
+                                            returnType: Property.self,
+                                            payload: payload,
+                                            withAuth: true,
+                                            method: "PATCH")
     }
 }
