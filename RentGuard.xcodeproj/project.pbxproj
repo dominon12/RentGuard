@@ -52,6 +52,7 @@
 		BDDC8EE92B98F1470019199C /* TenantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE82B98F1470019199C /* TenantCardView.swift */; };
 		BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */; };
 		BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */; };
+		BDDC8EF12B9A26A00019199C /* PropertyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		BDDC8EE82B98F1470019199C /* TenantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCardView.swift; sourceTree = "<group>"; };
 		BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRentabilityView.swift; sourceTree = "<group>"; };
 		BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyView.swift; sourceTree = "<group>"; };
+		BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -457,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EDC2B98E4040019199C /* PropertyDetailsView.swift */,
+				BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */,
 			);
 			path = PropertyDetails;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */,
 				BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */,
 				BDDC8E6F2B8E43A00019199C /* HomeView.swift in Sources */,
+				BDDC8EF12B9A26A00019199C /* PropertyDetailsViewModel.swift in Sources */,
 				BDDC8EC42B9649EB0019199C /* EmptyState.swift in Sources */,
 				BDDC8EDA2B98D7C50019199C /* CreatePropertyDto.swift in Sources */,
 				BDDC8EC92B9767DB0019199C /* PropertyFormViewModel.swift in Sources */,

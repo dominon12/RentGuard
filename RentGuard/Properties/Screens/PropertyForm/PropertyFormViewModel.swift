@@ -23,24 +23,30 @@ struct PropertyForm {
 
 @MainActor
 final class PropertyFormViewModel: ObservableObject {
-    var property: Property?
+    var title = ""
     @Binding var isActive: Bool
     @Published var form = PropertyForm()
     @Published var alert: AlertItem?
     @Published var isSaving = false
     
     init(property: Property? = nil, isActive: Binding<Bool>) {
-        self.property = property
+        self.title = property != nil ? "Edit Property" : "Add Property"
         self._isActive = isActive
-    }
-    
-    var title: String {
-        if property != nil {
-            return "Edit Property"
+        
+        if let property {
+            form = PropertyForm(name: property.name,
+                                address: property.address,
+                                city: property.city ?? "",
+                                postalCode: property.postalCode ?? "",
+                                country: property.country ?? "",
+                                surface: property.surface ?? "",
+                                price: property.price ?? "",
+                                registrationId: property.registrationId ?? "",
+                                images: property.images.map({ imageUrl in FormField(id: UUID(), value: imageUrl)}),
+                                documents: property.documents.map({ docUrl in FormField(id: UUID(), value: docUrl)}))
         }
-        return "Add Property"
     }
-    
+      
     var isValidForm: Bool {
         guard !form.name.isEmpty && !form.address.isEmpty else {
             alert = PropertiesAlerts.formInvalid

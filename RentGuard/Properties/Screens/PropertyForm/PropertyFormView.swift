@@ -12,35 +12,31 @@ struct PropertyFormView: View {
     @ObservedObject var viewModel: PropertyFormViewModel
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Form {
-                    PropertyDataFormView(form: $viewModel.form)
-                    
-                    Section(header: Text("Images")) {
-                        DynamicFormView(placeholder: "Image url", contentType: .URL, fields: $viewModel.form.images)
-                    }
-                    
-                    Section(header: Text("Documents")) {
-                        DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
-                    }
+        ZStack {
+            Form {
+                PropertyDataFormView(form: $viewModel.form)
+                
+                Section(header: Text("Images")) {
+                    DynamicFormView(placeholder: "Image url", contentType: .URL, fields: $viewModel.form.images)
                 }
                 
-                if viewModel.isSaving {
-                    LoadingView(opacity: 0.6)
+                Section(header: Text("Documents")) {
+                    DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
                 }
             }
-            .navigationTitle(viewModel.title)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        Task {
-                            await viewModel.save()
-                        }
-                    } label: {
-                        Text("Save")
+            
+            if viewModel.isSaving {
+                LoadingView(opacity: 0.6)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    Task {
+                        await viewModel.save()
                     }
+                } label: {
+                    Text("Save")
                 }
             }
         }

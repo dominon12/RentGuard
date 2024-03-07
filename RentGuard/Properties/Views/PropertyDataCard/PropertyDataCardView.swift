@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PropertyDataCardView: View {
     let property: Property
+    @Binding var isShowingForm: Bool
     
     var body: some View {
         DataCardView(title: "Data",
@@ -20,7 +21,7 @@ struct PropertyDataCardView: View {
                      ],
                      documents: property.documents) {
             Button {
-                
+                isShowingForm = true
             } label: {
                 Text("Edit")
             }
@@ -30,5 +31,5 @@ struct PropertyDataCardView: View {
 }
 
 #Preview {
-    PropertyDataCardView(property: PropertyMockData.sampleProperty)
+    PropertyDataCardView(property: PropertyMockData.sampleProperty, isShowingForm: .constant(false))
 }

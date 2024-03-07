@@ -17,7 +17,7 @@ struct PropertiesView: View {
                 List {
                     ForEach(viewModel.properties, id: \._id) { property in
                         NavigationLink(destination: {
-                            PropertyDetailsView(property: property)
+                            PropertyDetailsView(property: property).navigationTitle(property.name)
                         }, label: {
                             PropertyCardView(property: property)
                         })
@@ -48,7 +48,7 @@ struct PropertiesView: View {
             .navigationDestination(isPresented: $viewModel.isShowingForm) {
                 PropertyFormView(
                     viewModel: PropertyFormViewModel(
-                        isActive: $viewModel.isShowingForm))
+                        isActive: $viewModel.isShowingForm)).navigationTitle("Add Property")
             }
         }
         .task(id: viewModel.isShowingForm, {
