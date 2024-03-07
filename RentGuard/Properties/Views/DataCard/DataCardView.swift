@@ -33,7 +33,7 @@ struct DataCardView<Actions: View>: View {
             VStack(alignment: .leading) {
                 ForEach(data, id: \.0) { key, value in
                     HStack {
-                        Text(key)
+                        Text("\(key):")
                             .font(.body)
                             .bold()
                         

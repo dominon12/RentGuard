@@ -16,7 +16,11 @@ struct PropertiesView: View {
             ZStack {
                 List {
                     ForEach(viewModel.properties, id: \._id) { property in
-                        PropertyCardView(property: property)
+                        NavigationLink(destination: {
+                            PropertyDetailsView(property: property)
+                        }, label: {
+                            PropertyCardView(property: property)
+                        })
                     }
                 }
                 .listStyle(.inset)
