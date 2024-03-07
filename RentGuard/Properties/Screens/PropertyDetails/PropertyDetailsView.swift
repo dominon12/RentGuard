@@ -8,39 +8,42 @@
 import SwiftUI
 
 struct PropertyDetailsView: View {
-    var property: Property
-    let refetch: () async  -> Void
-    @StateObject var viewModel = PropertyDetailsViewModel()
+    @ObservedObject var viewModel: PropertyDetailsViewModel
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 24) {
-                CarouselView(images: property.images)
+        if let property = viewModel.property {
+            ScrollView {
+                VStack(spacing: 24) {
+                    CarouselView(images: property.images)
 
-                PropertyDataCardView(property: property, isShowingForm: $viewModel.isShowingForm)
-                
-                if let tenant = property.tenant {
-                    TenantCardView(tenant: tenant)
-                } else {
-                    AddTenantView()
-                        .padding(.horizontal)
+                    PropertyDataCardView(property: property, isShowingForm: $viewModel.isShowingForm)
+                    
+                    if let tenant = property.tenant {
+                        TenantCardView(tenant: tenant)
+                    } else {
+                        AddTenantView()
+                            .padding(.horizontal)
+                    }
+                    
+                    PropertyRentabilityView()
+                    
+                    DeletePropertyView(viewModel: DeletePropertyViewModel(refetch: viewModel.refetch,
+                                                                          property: $viewModel.property))
+                        .padding()
                 }
-                
-                PropertyRentabilityView()
-                
-                DeletePropertyView()
-                    .padding()
             }
-        }
-        .navigationDestination(isPresented: $viewModel.isShowingForm) {
-            PropertyFormView(viewModel:
-                                PropertyFormViewModel(property: property,
-                                                      refetch: refetch,
-                                                      isActive: $viewModel.isShowingForm)).navigationTitle("Edit Property")
+            .navigationDestination(isPresented: $viewModel.isShowingForm) {
+                PropertyFormView(viewModel:
+                                    PropertyFormViewModel(property: viewModel.property,
+                                                          refetch: viewModel.refetch,
+                                                          isActive: $viewModel.isShowingForm)).navigationTitle("Edit Property")
+            }
         }
     }
 }
 
 #Preview {
-    PropertyDetailsView(property: PropertyMockData.sampleProperty) {}
+    PropertyDetailsView(viewModel:
+                            PropertyDetailsViewModel(refetch: {},
+                                                     property: .constant(PropertyMockData.sampleProperty)))
 }

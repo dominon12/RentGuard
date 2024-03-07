@@ -15,4 +15,9 @@ struct PropertiesAlerts {
     static let saveFailed = AlertItem(title: Text("Couldn't save"),
                                       message: Text("Something went wrong trying to save the form. Please try again later."),
                                       dismissButton: .default(Text("OK")))
+    
+    static let deleteFailed = AlertItem(title: Text("Couldn't delete"),
+                                        message: Text("Something went wrong trying to delete the property. Please try again later."),
+                                        dismissButton: .default(Text("OK")))
+
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Property: Decodable {
+struct Property: Codable, Hashable {
     var _id: String
     var name: String
     var address: String

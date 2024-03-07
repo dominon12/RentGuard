@@ -13,6 +13,7 @@ final class PropertiesViewModel: ObservableObject {
     @Published var properties = [Property]()
     @Published var isLoading = false
     @Published var isShowingForm = false
+    @Published var property: Property?
     
     func getProperties() async {
         isLoading = true

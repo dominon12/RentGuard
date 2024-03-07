@@ -14,15 +14,14 @@ struct PropertiesView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                List {
-                    ForEach(viewModel.properties, id: \._id) { property in
-                        NavigationLink(destination: {
-                            PropertyDetailsView(property: property,
-                                                refetch: viewModel.getProperties)
-                                .navigationTitle(property.name)
-                        }, label: {
-                            PropertyCardView(property: property)
-                        })
+                List(viewModel.properties, id: \._id) { property in
+                    Button {
+
+                    } label: {
+                        PropertyCardView(property: property)
+                    }
+                    .onTapGesture {
+                        viewModel.property = property
                     }
                 }
                 .listStyle(.inset)
@@ -49,6 +48,12 @@ struct PropertiesView: View {
                         refetch: viewModel.getProperties,
                         isActive: $viewModel.isShowingForm))
                     .navigationTitle("Add Property")
+            }
+            .navigationDestination(item: $viewModel.property) { property in
+                    PropertyDetailsView(viewModel:
+                                            PropertyDetailsViewModel(refetch: viewModel.getProperties,
+                                                                     property: $viewModel.property))
+                        .navigationTitle(property.name)
             }
         }
         .task {

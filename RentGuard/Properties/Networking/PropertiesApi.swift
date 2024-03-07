@@ -35,4 +35,12 @@ final class PropertiesApi: NetworkManager {
                                             withAuth: true,
                                             method: "PATCH")
     }
+    
+    static func delete(id: String) async throws {
+        let url = path + id
+        try await PropertiesApi.makeRequest(urlPath: url, 
+                                            returnType: Property.self,
+                                            withAuth: true,
+                                            method: "DELETE")
+    }
 }

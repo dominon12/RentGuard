@@ -55,6 +55,7 @@
 		BDDC8EF12B9A26A00019199C /* PropertyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */; };
 		BDDC8EF52B9A3DB10019199C /* AddTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF42B9A3DB10019199C /* AddTenant.swift */; };
 		BDDC8EF92B9A3DCF0019199C /* TenantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */; };
+		BDDC8EFB2B9A40690019199C /* DeletePropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EFA2B9A40690019199C /* DeletePropertyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsViewModel.swift; sourceTree = "<group>"; };
 		BDDC8EF42B9A3DB10019199C /* AddTenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenant.swift; sourceTree = "<group>"; };
 		BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantFormView.swift; sourceTree = "<group>"; };
+		BDDC8EFA2B9A40690019199C /* DeletePropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */,
+				BDDC8EFA2B9A40690019199C /* DeletePropertyViewModel.swift */,
 			);
 			path = DeleteProperty;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				BDDC8E9F2B922E0A0019199C /* AlertsListView.swift in Sources */,
 				BDDC8EC22B9647C50019199C /* PropertiesViewModel.swift in Sources */,
 				BDDC8EE92B98F1470019199C /* TenantCardView.swift in Sources */,
+				BDDC8EFB2B9A40690019199C /* DeletePropertyViewModel.swift in Sources */,
 				BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */,
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,

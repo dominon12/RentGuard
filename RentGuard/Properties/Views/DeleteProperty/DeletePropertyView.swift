@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+@MainActor
 struct DeletePropertyView: View {
+    @ObservedObject var viewModel: DeletePropertyViewModel
+    
     var body: some View {
         Button {
-            
+            viewModel.showConfirmation = true
         } label: {
             Text("Delete Property")
         }
@@ -20,9 +23,22 @@ struct DeletePropertyView: View {
         .background(.red)
         .foregroundColor(.white)
         .cornerRadius(12)
+        .confirmationDialog("Are you sure you want to delete this property?",
+                            isPresented: $viewModel.showConfirmation,
+                            titleVisibility: .visible) {
+            Button("Yes, delete", role: .destructive) {
+                Task {
+                    await viewModel.deleteProperty()
+                }
+            }
+        } message: {
+            Text("Proceed with caution! This action is permanent and cannot be reverted.")
+        }
     }
 }
 
 #Preview {
-    DeletePropertyView()
+    DeletePropertyView(viewModel:
+                        DeletePropertyViewModel(refetch: {},
+                                                property: .constant(PropertyMockData.sampleProperty)))
 }
