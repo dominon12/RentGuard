@@ -21,6 +21,9 @@ struct PropertyDetailsView: View {
                 
                 if let tenant = property.tenant {
                     TenantCardView(tenant: tenant)
+                } else {
+                    AddTenantView()
+                        .padding(.horizontal)
                 }
                 
                 PropertyRentabilityView()

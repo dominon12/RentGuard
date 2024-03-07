@@ -53,6 +53,8 @@
 		BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */; };
 		BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */; };
 		BDDC8EF12B9A26A00019199C /* PropertyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */; };
+		BDDC8EF52B9A3DB10019199C /* AddTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF42B9A3DB10019199C /* AddTenant.swift */; };
+		BDDC8EF92B9A3DCF0019199C /* TenantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRentabilityView.swift; sourceTree = "<group>"; };
 		BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyView.swift; sourceTree = "<group>"; };
 		BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsViewModel.swift; sourceTree = "<group>"; };
+		BDDC8EF42B9A3DB10019199C /* AddTenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenant.swift; sourceTree = "<group>"; };
+		BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +354,8 @@
 		BDDC8EB32B9640C70019199C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDDC8EF72B9A3DC50019199C /* TenantForm */,
+				BDDC8EF62B9A3DB70019199C /* AddTenant */,
 				BDDC8EED2B98F5E80019199C /* DeleteProperty */,
 				BDDC8EEA2B98F1EA0019199C /* PropertyRentability */,
 				BDDC8EE72B98F13A0019199C /* TenantCard */,
@@ -512,6 +518,22 @@
 			path = DeleteProperty;
 			sourceTree = "<group>";
 		};
+		BDDC8EF62B9A3DB70019199C /* AddTenant */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EF42B9A3DB10019199C /* AddTenant.swift */,
+			);
+			path = AddTenant;
+			sourceTree = "<group>";
+		};
+		BDDC8EF72B9A3DC50019199C /* TenantForm */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */,
+			);
+			path = TenantForm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -601,6 +623,7 @@
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
 				BDDC8EE02B98E5590019199C /* DataCardView.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
+				BDDC8EF92B9A3DCF0019199C /* TenantFormView.swift in Sources */,
 				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
@@ -625,6 +648,7 @@
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
 				BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */,
 				BDDC8EA52B9232BE0019199C /* AlertListViewModel.swift in Sources */,
+				BDDC8EF52B9A3DB10019199C /* AddTenant.swift in Sources */,
 				BDDC8E9B2B90DBBC0019199C /* HomeViewModel.swift in Sources */,
 				BDDC8EA82B9251C40019199C /* LoadingView.swift in Sources */,
 				BDDC8E942B8F8BC20019199C /* Role.swift in Sources */,
