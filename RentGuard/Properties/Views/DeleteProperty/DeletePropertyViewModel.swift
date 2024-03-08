@@ -9,22 +9,20 @@ import SwiftUI
 
 @MainActor
 final class DeletePropertyViewModel: ObservableObject {
-    let refetch: () async -> Void
-    @Binding var property: Property?
+    private let propertiesEnv: PropertiesEnvironment
     @Published var showConfirmation = false
     @Published var alert: AlertItem?
     
-    init(refetch: @escaping () async -> Void, property: Binding<Property?>) {
-        self.refetch = refetch
-        self._property = property
+    init(propertiesEnv: PropertiesEnvironment) {
+        self.propertiesEnv = propertiesEnv
     }
     
     func deleteProperty() async {
-        if let id = property?._id {
+        if let id = propertiesEnv.property?._id {
             do {
                 try await PropertiesApi.delete(id: id)
-                await refetch()
-                property = nil
+                await propertiesEnv.getProperties()
+                propertiesEnv.property = nil
             } catch {
                 alert = PropertiesAlerts.deleteFailed
             }

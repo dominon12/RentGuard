@@ -7,13 +7,17 @@
 
 import SwiftUI
 
+@MainActor
 struct MainView: View {
+    @StateObject private var propertiesEnv = PropertiesEnvironment()
+    
     var body: some View {
         TabView {
             HomeView()
                 .tabItem { Label("Home", systemImage: "house") }
             
             PropertiesView()
+                .environmentObject(propertiesEnv)
                 .tabItem { Label("Properties", systemImage: "building.2.fill") }
             
             AccountView()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970662B9B589300055870 /* PropertiesEnvironment.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -36,7 +37,6 @@
 		BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB92B9641280019199C /* PropertyCardView.swift */; };
 		BDDC8EBD2B9641680019199C /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EBC2B9641680019199C /* Property.swift */; };
 		BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EBF2B9647460019199C /* PropertiesApi.swift */; };
-		BDDC8EC22B9647C50019199C /* PropertiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC12B9647C50019199C /* PropertiesViewModel.swift */; };
 		BDDC8EC42B9649EB0019199C /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC32B9649EB0019199C /* EmptyState.swift */; };
 		BDDC8EC72B9766990019199C /* PropertyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC62B9766990019199C /* PropertyFormView.swift */; };
 		BDDC8EC92B9767DB0019199C /* PropertyFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC82B9767DB0019199C /* PropertyFormViewModel.swift */; };
@@ -52,13 +52,13 @@
 		BDDC8EE92B98F1470019199C /* TenantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE82B98F1470019199C /* TenantCardView.swift */; };
 		BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */; };
 		BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */; };
-		BDDC8EF12B9A26A00019199C /* PropertyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */; };
 		BDDC8EF52B9A3DB10019199C /* AddTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF42B9A3DB10019199C /* AddTenant.swift */; };
 		BDDC8EF92B9A3DCF0019199C /* TenantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */; };
 		BDDC8EFB2B9A40690019199C /* DeletePropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EFA2B9A40690019199C /* DeletePropertyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2970662B9B589300055870 /* PropertiesEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesEnvironment.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		BDDC8EB92B9641280019199C /* PropertyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCardView.swift; sourceTree = "<group>"; };
 		BDDC8EBC2B9641680019199C /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		BDDC8EBF2B9647460019199C /* PropertiesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesApi.swift; sourceTree = "<group>"; };
-		BDDC8EC12B9647C50019199C /* PropertiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewModel.swift; sourceTree = "<group>"; };
 		BDDC8EC32B9649EB0019199C /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		BDDC8EC62B9766990019199C /* PropertyFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFormView.swift; sourceTree = "<group>"; };
 		BDDC8EC82B9767DB0019199C /* PropertyFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFormViewModel.swift; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 		BDDC8EE82B98F1470019199C /* TenantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCardView.swift; sourceTree = "<group>"; };
 		BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRentabilityView.swift; sourceTree = "<group>"; };
 		BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyView.swift; sourceTree = "<group>"; };
-		BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsViewModel.swift; sourceTree = "<group>"; };
 		BDDC8EF42B9A3DB10019199C /* AddTenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenant.swift; sourceTree = "<group>"; };
 		BDDC8EF82B9A3DCF0019199C /* TenantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantFormView.swift; sourceTree = "<group>"; };
 		BDDC8EFA2B9A40690019199C /* DeletePropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD2970652B9B588400055870 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				BD2970662B9B589300055870 /* PropertiesEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		BDDC8E502B8E3EB40019199C = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +185,7 @@
 		BDDC8E702B8E43AB0019199C /* Properties */ = {
 			isa = PBXGroup;
 			children = (
+				BD2970652B9B588400055870 /* Environment */,
 				BDDC8ED62B9782990019199C /* Alerts */,
 				BDDC8EBE2B9647380019199C /* Networking */,
 				BDDC8EBB2B9641600019199C /* Types */,
@@ -392,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8E712B8E43BB0019199C /* PropertiesView.swift */,
-				BDDC8EC12B9647C50019199C /* PropertiesViewModel.swift */,
 			);
 			path = Properties;
 			sourceTree = "<group>";
@@ -467,7 +473,6 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EDC2B98E4040019199C /* PropertyDetailsView.swift */,
-				BDDC8EF02B9A26A00019199C /* PropertyDetailsViewModel.swift */,
 			);
 			path = PropertyDetails;
 			sourceTree = "<group>";
@@ -619,7 +624,6 @@
 				BDDC8E8E2B8F8B310019199C /* UserApi.swift in Sources */,
 				BDDC8EE62B98F0BD0019199C /* PropertyDataCardView.swift in Sources */,
 				BDDC8E9F2B922E0A0019199C /* AlertsListView.swift in Sources */,
-				BDDC8EC22B9647C50019199C /* PropertiesViewModel.swift in Sources */,
 				BDDC8EE92B98F1470019199C /* TenantCardView.swift in Sources */,
 				BDDC8EFB2B9A40690019199C /* DeletePropertyViewModel.swift in Sources */,
 				BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */,
@@ -628,6 +632,7 @@
 				BDDC8EE02B98E5590019199C /* DataCardView.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
 				BDDC8EF92B9A3DCF0019199C /* TenantFormView.swift in Sources */,
+				BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */,
 				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
@@ -636,7 +641,6 @@
 				BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */,
 				BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */,
 				BDDC8E6F2B8E43A00019199C /* HomeView.swift in Sources */,
-				BDDC8EF12B9A26A00019199C /* PropertyDetailsViewModel.swift in Sources */,
 				BDDC8EC42B9649EB0019199C /* EmptyState.swift in Sources */,
 				BDDC8EDA2B98D7C50019199C /* CreatePropertyDto.swift in Sources */,
 				BDDC8EC92B9767DB0019199C /* PropertyFormViewModel.swift in Sources */,

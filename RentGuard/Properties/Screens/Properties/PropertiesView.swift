@@ -9,24 +9,20 @@ import SwiftUI
 
 @MainActor
 struct PropertiesView: View {
-    @StateObject private var viewModel = PropertiesViewModel()
+    @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
     
     var body: some View {
         NavigationStack {
             ZStack {
-                List(viewModel.properties, id: \._id) { property in
-                    Button {
-
-                    } label: {
-                        PropertyCardView(property: property)
-                    }
-                    .onTapGesture {
-                        viewModel.property = property
-                    }
+                List(propertiesEnv.properties, id: \._id) { property in
+                    PropertyCardView(property: property)
+                        .onTapGesture {
+                            propertiesEnv.property = property
+                        }
                 }
                 .listStyle(.inset)
                 
-                if viewModel.properties.isEmpty {
+                if propertiesEnv.properties.isEmpty {
                     EmptyState(imageName: "empty-box",
                                message: "There are no properties yet.")
                 }
@@ -36,28 +32,23 @@ struct PropertiesView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        viewModel.isShowingForm = true
+                        propertiesEnv.isCreatingProperty = true
                     } label: {
                         Text("Add")
                     }
                 }
             }
-            .navigationDestination(isPresented: $viewModel.isShowingForm) {
-                PropertyFormView(
-                    viewModel: PropertyFormViewModel(
-                        refetch: viewModel.getProperties,
-                        isActive: $viewModel.isShowingForm))
+            .navigationDestination(isPresented: $propertiesEnv.isCreatingProperty) {
+                PropertyFormView(viewModel: PropertyFormViewModel(propertiesEnv: propertiesEnv))
                     .navigationTitle("Add Property")
             }
-            .navigationDestination(item: $viewModel.property) { property in
-                    PropertyDetailsView(viewModel:
-                                            PropertyDetailsViewModel(refetch: viewModel.getProperties,
-                                                                     property: $viewModel.property))
+            .navigationDestination(item: $propertiesEnv.property) { property in
+                    PropertyDetailsView()
                         .navigationTitle(property.name)
             }
         }
         .task {
-            await viewModel.getProperties()
+            await propertiesEnv.getProperties()
         }
     }
 }

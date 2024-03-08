@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 struct PropertyFormView: View {
     @ObservedObject var viewModel: PropertyFormViewModel
-    
+
     var body: some View {
         ZStack {
             Form {
@@ -49,6 +49,7 @@ struct PropertyFormView: View {
 }
 
 #Preview {
-    PropertyFormView(
-        viewModel: PropertyFormViewModel(refetch: {}, isActive: .constant(true)))
+    PropertyFormView(viewModel:
+                        PropertyFormViewModel(
+                            propertiesEnv: PropertiesEnvironment()))
 }

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct PropertyDetailsView: View {
-    @ObservedObject var viewModel: PropertyDetailsViewModel
+    @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
     
     var body: some View {
-        if let property = viewModel.property {
+        if let property = propertiesEnv.property {
             ScrollView {
                 VStack(spacing: 24) {
                     CarouselView(images: property.images)
 
-                    PropertyDataCardView(property: property, isShowingForm: $viewModel.isShowingForm)
+                    PropertyDataCardView()
                     
                     if let tenant = property.tenant {
                         TenantCardView(tenant: tenant)
@@ -27,23 +27,18 @@ struct PropertyDetailsView: View {
                     
                     PropertyRentabilityView()
                     
-                    DeletePropertyView(viewModel: DeletePropertyViewModel(refetch: viewModel.refetch,
-                                                                          property: $viewModel.property))
+                    DeletePropertyView(viewModel: DeletePropertyViewModel(propertiesEnv: propertiesEnv))
                         .padding()
                 }
             }
-            .navigationDestination(isPresented: $viewModel.isShowingForm) {
-                PropertyFormView(viewModel:
-                                    PropertyFormViewModel(property: viewModel.property,
-                                                          refetch: viewModel.refetch,
-                                                          isActive: $viewModel.isShowingForm)).navigationTitle("Edit Property")
+            .navigationDestination(isPresented: $propertiesEnv.isEditingProperty) {
+                PropertyFormView(viewModel: PropertyFormViewModel(propertiesEnv: propertiesEnv))
+                    .navigationTitle("Edit Property")
             }
         }
     }
 }
 
 #Preview {
-    PropertyDetailsView(viewModel:
-                            PropertyDetailsViewModel(refetch: {},
-                                                     property: .constant(PropertyMockData.sampleProperty)))
+    PropertyDetailsView()
 }

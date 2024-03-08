@@ -1,18 +1,18 @@
 //
-//  PropertiesViewModel.swift
+//  PropertiesEnvironment.swift
 //  RentGuard
 //
-//  Created by Maksim Sobolev on 4/3/24.
+//  Created by Maksim Sobolev on 8/3/24.
 //
 
 import Foundation
-import Observation
 
 @MainActor
-final class PropertiesViewModel: ObservableObject {
+final class PropertiesEnvironment: ObservableObject {
     @Published var properties = [Property]()
     @Published var isLoading = false
-    @Published var isShowingForm = false
+    @Published var isCreatingProperty = false
+    @Published var isEditingProperty = false
     @Published var property: Property?
     
     func getProperties() async {

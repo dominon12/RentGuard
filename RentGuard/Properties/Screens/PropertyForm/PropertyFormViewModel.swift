@@ -23,19 +23,15 @@ struct PropertyForm {
 
 @MainActor
 final class PropertyFormViewModel: ObservableObject {
-    let property: Property?
-    let refetch: () async -> Void
-    @Binding var isActive: Bool
+    private let propertiesEnv: PropertiesEnvironment
     @Published var form = PropertyForm()
     @Published var alert: AlertItem?
     @Published var isSaving = false
     
-    init(property: Property? = nil, refetch: @escaping () async -> Void, isActive: Binding<Bool>) {
-        self.property = property
-        self.refetch = refetch
-        self._isActive = isActive
+    init(propertiesEnv: PropertiesEnvironment) {
+        self.propertiesEnv = propertiesEnv
         
-        if let property {
+        if let property = propertiesEnv.property {
             form = PropertyForm(name: property.name,
                                 address: property.address,
                                 city: property.city ?? "",
@@ -73,13 +69,15 @@ final class PropertyFormViewModel: ObservableObject {
         
         isSaving = true
         do {
-            if let property {
+            if let property = propertiesEnv.property {
                 try await PropertiesApi.update(id: property._id, payload: payload)
+                await propertiesEnv.getProperties()
+                propertiesEnv.isEditingProperty = false
             } else {
                 try await PropertiesApi.create(payload: payload)
+                await propertiesEnv.getProperties()
+                propertiesEnv.isCreatingProperty = false
             }
-            await refetch()
-            isActive = false
         } catch {
             alert = PropertiesAlerts.saveFailed
         }

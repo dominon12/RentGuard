@@ -39,6 +39,6 @@ struct DeletePropertyView: View {
 
 #Preview {
     DeletePropertyView(viewModel:
-                        DeletePropertyViewModel(refetch: {},
-                                                property: .constant(PropertyMockData.sampleProperty)))
+                        DeletePropertyViewModel(
+                            propertiesEnv: PropertiesEnvironment()))
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct RentGuardApp: App {
-    private var authManager = AuthManager()
+    @StateObject private var authManager = AuthManager()
     
     var body: some Scene {
         WindowGroup {
