@@ -50,4 +50,5 @@ struct PropertyDataCardView: View {
 
 #Preview {
     PropertyDataCardView()
+        .environmentObject(PropertiesEnvironment())
 }

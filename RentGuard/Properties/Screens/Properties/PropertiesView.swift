@@ -55,4 +55,5 @@ struct PropertiesView: View {
 
 #Preview {
     PropertiesView()
+        .environmentObject(PropertiesEnvironment())
 }

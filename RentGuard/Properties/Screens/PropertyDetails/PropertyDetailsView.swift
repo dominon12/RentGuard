@@ -41,4 +41,5 @@ struct PropertyDetailsView: View {
 
 #Preview {
     PropertyDetailsView()
+        .environmentObject(PropertiesEnvironment())
 }
