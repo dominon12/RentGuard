@@ -13,8 +13,12 @@ final class ContractsApi: NetworkManager {
     
     static func getContract(propertyId: String) async throws -> Contract {
         let url = path + "by-property/" + propertyId
-        return try await PropertiesApi.makeRequest(urlPath: url,
-                                                   returnType: Contract.self,
-                                                   withAuth: true)
+        let data = try await NetworkManager.makeRequest(urlPath: url, withAuth: true)
+        return try NetworkManager.decodeResponse(data, returnType: Contract.self)
+    }
+    
+    static func delete(id: String) async throws {
+        let url = path + id
+        let _ = try await NetworkManager.makeRequest(urlPath: url, withAuth: true, method: "DELETE")
     }
 }

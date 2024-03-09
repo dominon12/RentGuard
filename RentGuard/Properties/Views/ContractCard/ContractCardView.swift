@@ -7,37 +7,56 @@
 
 import SwiftUI
 
+@MainActor
 struct ContractCardView: View {
-    let contract: Contract
+    @ObservedObject var viewModel: ContractCardViewModel
     
     var body: some View {
-        DataCardView(title: "Contract",
-                     data: [
-                        ("Name", contract.tenant.name),
-                        ("Contract", "\(contract.from.formatted(date: .abbreviated, time: .omitted)) - \(contract.until.formatted(date: .abbreviated, time: .omitted))"),
-                        ("Rent", "$\(contract.rent)"),
-                        ("Deposit", "$\(contract.deposit ?? 0)")
-                     ],
-                     documents: contract.documents) {
-            HStack(spacing: 24) {
-                Button {
+        if let contract = viewModel.contractEnv.contract {
+            DataCardView(title: "Contract",
+                         data: [
+                            ("Name", contract.tenant.name),
+                            ("Contract", "\(contract.from.formatted(date: .abbreviated, time: .omitted)) - \(contract.until.formatted(date: .abbreviated, time: .omitted))"),
+                            ("Rent", "$\(contract.rent)"),
+                            ("Deposit", "$\(contract.deposit ?? 0)")
+                         ],
+                         documents: contract.documents) {
+                HStack(spacing: 24) {
+                    Button {
+                        
+                    } label: {
+                        Text("Edit")
+                    }
                     
-                } label: {
-                    Text("Edit")
+                    Button {
+                        viewModel.isDeleting = true
+                    } label: {
+                        Text("Delete")
+                    }
+                    .foregroundColor(.red)
                 }
-                
-                Button {
-                    
-                } label: {
-                    Text("Delete")
+            }
+            .padding(.horizontal)
+            .confirmationDialog("Are you sure you want to delete this contract?",
+                                isPresented: $viewModel.isDeleting,
+                                titleVisibility: .visible) {
+                Button("Yes, delete", role: .destructive) {
+                    Task {
+                        await viewModel.deleteContract()
+                    }
                 }
-                .foregroundColor(.red)
+            } message: {
+                Text("Proceed with caution! This action is permanent and cannot be reverted.")
+            }
+            .alert(item: $viewModel.alert) { alert in
+                Alert(title: alert.title,
+                      message: alert.message,
+                      dismissButton: alert.dismissButton)
             }
         }
-        .padding(.horizontal)
     }
 }
 
 #Preview {
-    ContractCardView(contract: ContractMockData.sampleContract)
+    ContractCardView(viewModel: ContractCardViewModel(contractEnv: ContractEnvironment()))
 }

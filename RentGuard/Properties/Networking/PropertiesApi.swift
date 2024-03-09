@@ -13,34 +13,22 @@ final class PropertiesApi: NetworkManager {
     
     static func getProperties() async throws -> [Property] {
         let url = path
-        return try await PropertiesApi.makeRequest(urlPath: url,
-                                                   returnType: [Property].self,
-                                                   withAuth: true)
+        let data = try await NetworkManager.makeRequest(urlPath: url, withAuth: true)
+        return try NetworkManager.decodeResponse(data, returnType: [Property].self)
     }
     
     static func create(payload: SavePropertyDto) async throws {
         let url = path
-        try await PropertiesApi.makeRequest(urlPath: url,
-                                            returnType: Property.self,
-                                            payload: payload,
-                                            withAuth: true,
-                                            method: "POST")
+        let _ = try await NetworkManager.makeRequest(urlPath: url, payload: payload, withAuth: true, method: "POST")
     }
     
     static func update(id: String, payload: SavePropertyDto) async throws {
         let url = path + id
-        try await PropertiesApi.makeRequest(urlPath: url,
-                                            returnType: Property.self,
-                                            payload: payload,
-                                            withAuth: true,
-                                            method: "PATCH")
+        let _ = try await NetworkManager.makeRequest(urlPath: url, payload: payload, withAuth: true, method: "PATCH")
     }
     
     static func delete(id: String) async throws {
         let url = path + id
-        try await PropertiesApi.makeRequest(urlPath: url, 
-                                            returnType: Property.self,
-                                            withAuth: true,
-                                            method: "DELETE")
+        let _ = try await NetworkManager.makeRequest(urlPath: url, withAuth: true, method: "DELETE")
     }
 }

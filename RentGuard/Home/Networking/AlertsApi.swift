@@ -18,9 +18,9 @@ final class AlertsApi: NetworkManager {
     
     static func getAlerts(type: AlertListType) async throws -> [UserAlert] {
         let url = path
-        return try await AlertsApi.makeRequest(urlPath: url,
-                                               returnType: [UserAlert].self,
-                                               query: [URLQueryItem(name: "type", value: type.rawValue)],
-                                               withAuth: true)
+        let data = try await AlertsApi.makeRequest(urlPath: url,
+                                                   query: [URLQueryItem(name: "type", value: type.rawValue)],
+                                                   withAuth: true)
+        return try NetworkManager.decodeResponse(data, returnType: [UserAlert].self)
     }
 }

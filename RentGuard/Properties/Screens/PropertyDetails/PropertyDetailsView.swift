@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PropertyDetailsView: View {
     @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
+    @StateObject private var contractEnv = ContractEnvironment()
     
     var body: some View {
         if let property = propertiesEnv.property {
@@ -18,7 +19,8 @@ struct PropertyDetailsView: View {
 
                     PropertyDataCardView()
                     
-                    ContractView(viewModel: ContractViewModel(propertyId: property._id))
+                    ContractView()
+                        .environmentObject(contractEnv)
                     
                     PropertyRentabilityView()
                     
@@ -36,5 +38,4 @@ struct PropertyDetailsView: View {
 
 #Preview {
     PropertyDetailsView()
-        .environmentObject(PropertiesEnvironment())
 }

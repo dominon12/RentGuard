@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970662B9B589300055870 /* PropertiesEnvironment.swift */; };
 		BD29706A2B9C8F6600055870 /* ContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970692B9C8F6600055870 /* ContractView.swift */; };
-		BD29706C2B9C8F9900055870 /* ContractViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29706B2B9C8F9900055870 /* ContractViewModel.swift */; };
 		BD29706E2B9C905600055870 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29706D2B9C905600055870 /* Contract.swift */; };
 		BD2970702B9C922500055870 /* ContractsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29706F2B9C922500055870 /* ContractsApi.swift */; };
 		BD2970732B9C94D400055870 /* DateDecodingStrategy+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970722B9C94D400055870 /* DateDecodingStrategy+Ext.swift */; };
+		BD2970752B9C9A5300055870 /* ContractCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970742B9C9A5300055870 /* ContractCardViewModel.swift */; };
+		BD2970772B9C9B0100055870 /* ContractsAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970762B9C9B0100055870 /* ContractsAlerts.swift */; };
+		BD2970792B9C9BF200055870 /* ContractEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970782B9C9BF200055870 /* ContractEnvironment.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -65,10 +67,12 @@
 /* Begin PBXFileReference section */
 		BD2970662B9B589300055870 /* PropertiesEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesEnvironment.swift; sourceTree = "<group>"; };
 		BD2970692B9C8F6600055870 /* ContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractView.swift; sourceTree = "<group>"; };
-		BD29706B2B9C8F9900055870 /* ContractViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractViewModel.swift; sourceTree = "<group>"; };
 		BD29706D2B9C905600055870 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		BD29706F2B9C922500055870 /* ContractsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsApi.swift; sourceTree = "<group>"; };
 		BD2970722B9C94D400055870 /* DateDecodingStrategy+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+Ext.swift"; sourceTree = "<group>"; };
+		BD2970742B9C9A5300055870 /* ContractCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractCardViewModel.swift; sourceTree = "<group>"; };
+		BD2970762B9C9B0100055870 /* ContractsAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsAlerts.swift; sourceTree = "<group>"; };
+		BD2970782B9C9BF200055870 /* ContractEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractEnvironment.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				BD2970662B9B589300055870 /* PropertiesEnvironment.swift */,
+				BD2970782B9C9BF200055870 /* ContractEnvironment.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -142,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				BD2970692B9C8F6600055870 /* ContractView.swift */,
-				BD29706B2B9C8F9900055870 /* ContractViewModel.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -496,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */,
+				BD2970762B9C9B0100055870 /* ContractsAlerts.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDC8EE82B98F1470019199C /* ContractCardView.swift */,
+				BD2970742B9C9A5300055870 /* ContractCardViewModel.swift */,
 			);
 			path = ContractCard;
 			sourceTree = "<group>";
@@ -657,6 +663,7 @@
 				BDDC8E9F2B922E0A0019199C /* AlertsListView.swift in Sources */,
 				BDDC8EE92B98F1470019199C /* ContractCardView.swift in Sources */,
 				BDDC8EFB2B9A40690019199C /* DeletePropertyViewModel.swift in Sources */,
+				BD2970792B9C9BF200055870 /* ContractEnvironment.swift in Sources */,
 				BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */,
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
@@ -665,6 +672,7 @@
 				BDDC8EF92B9A3DCF0019199C /* ContractFormView.swift in Sources */,
 				BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */,
 				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
+				BD2970772B9C9B0100055870 /* ContractsAlerts.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
 				BD29706E2B9C905600055870 /* Contract.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
@@ -688,11 +696,11 @@
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
 				BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */,
 				BDDC8EA52B9232BE0019199C /* AlertListViewModel.swift in Sources */,
+				BD2970752B9C9A5300055870 /* ContractCardViewModel.swift in Sources */,
 				BD29706A2B9C8F6600055870 /* ContractView.swift in Sources */,
 				BDDC8EF52B9A3DB10019199C /* AddContractView.swift in Sources */,
 				BD2970702B9C922500055870 /* ContractsApi.swift in Sources */,
 				BDDC8E9B2B90DBBC0019199C /* HomeViewModel.swift in Sources */,
-				BD29706C2B9C8F9900055870 /* ContractViewModel.swift in Sources */,
 				BDDC8EA82B9251C40019199C /* LoadingView.swift in Sources */,
 				BDDC8E942B8F8BC20019199C /* Role.swift in Sources */,
 				BDDC8ED52B97823C0019199C /* Alert.swift in Sources */,

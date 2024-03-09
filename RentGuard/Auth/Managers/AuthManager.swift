@@ -31,7 +31,7 @@ final class AuthManager: ObservableObject {
                 case .success(let credentials):
                     DispatchQueue.main.async {
                         Task {
-                            let didCreateUser = await self.createUserInDb(from: credentials.idToken)
+                            await self.createUserInDb(from: credentials.idToken)
                             let isStored = self.credentialsManager.store(credentials: credentials)
                             self.accessToken = credentials.accessToken
                             if isStored {
@@ -46,24 +46,22 @@ final class AuthManager: ObservableObject {
             }
     }
     
-    private func createUserInDb(from idToken: String) async -> Bool {
+    private func createUserInDb(from idToken: String) async {
         guard
             let jwt = try? decode(jwt: idToken),
             let name = jwt.claim(name: "name").string,
             let email = jwt.claim(name: "email").string
         else {
             print("Failed to decode id token")
-            return false
+            return
         }
         
         let payload = CreateUserDto(name: name, email: email, role: .owner)
 
         do {
             try await UserApi.create(payload)
-            return true
         } catch {
             print("Error creating user in db")
-            return false
         }
     }
     

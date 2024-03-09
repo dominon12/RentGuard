@@ -10,18 +10,14 @@ import Foundation
 class UserApi: NetworkManager {
     static let path = "users/"
     
-    static func create(_ payload: CreateUserDto) async throws -> User {
+    static func create(_ payload: CreateUserDto) async throws {
         let url = UserApi.path
-        return try await UserApi.makeRequest(urlPath: url,
-                                             returnType: User.self,
-                                             payload: payload,
-                                             method: "POST")
+        try await NetworkManager.makeRequest(urlPath: url, payload: payload, method: "POST")
     }
     
     static func current() async throws -> User {
         let url = UserApi.path + "current"
-        return try await UserApi.makeRequest(urlPath: url, 
-                                             returnType: User.self,
-                                             withAuth: true)
+        let data = try await NetworkManager.makeRequest(urlPath: url, withAuth: true)
+        return try NetworkManager.decodeResponse(data, returnType: User.self)
     }
 }

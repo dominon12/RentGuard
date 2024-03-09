@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct ContractView: View {
-    @ObservedObject var viewModel: ContractViewModel
+    @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
+    @EnvironmentObject private var contractEnv: ContractEnvironment
     
     var body: some View {
         ZStack {
-            if !viewModel.isLoading {
-                if let contract = viewModel.contract {
-                    ContractCardView(contract: contract)
-                } else {
-                    AddContractView()
-                        .padding(.horizontal)
-                }
+            if contractEnv.contract != nil {
+                ContractCardView(viewModel: ContractCardViewModel(contractEnv: contractEnv))
+            } else {
+                AddContractView()
+                    .padding(.horizontal)
             }
         }
         .task {
-            await viewModel.getContract()
+            if let id = propertiesEnv.property?._id {
+                await contractEnv.getContract(propertyId: id)
+            }
         }
     }
 }
 
 #Preview {
-    ContractView(viewModel: 
-                    ContractViewModel(
-                        propertyId: PropertyMockData.sampleProperty._id))
+    ContractView()
+        .environmentObject(ContractEnvironment())
 }

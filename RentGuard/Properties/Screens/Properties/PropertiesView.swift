@@ -43,8 +43,8 @@ struct PropertiesView: View {
                     .navigationTitle("Add Property")
             }
             .navigationDestination(item: $propertiesEnv.property) { property in
-                    PropertyDetailsView()
-                        .navigationTitle(property.name)
+                PropertyDetailsView()
+                    .navigationTitle(property.name)
             }
         }
         .task {
