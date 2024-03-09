@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct AddTenantView: View {
+struct AddContractView: View {
     var body: some View {
         NavigationLink {
-            TenantFormView()
-                .navigationTitle("Add Tenant")
+            ContractFormView()
+                .navigationTitle("Add Contract")
         } label: {
-            Label("Add Tenant", systemImage: "person.badge.plus")
+            Label("Add Contract", systemImage: "person.badge.plus")
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .background(.blue)
@@ -24,5 +24,5 @@ struct AddTenantView: View {
 }
 
 #Preview {
-    AddTenantView()
+    AddContractView()
 }

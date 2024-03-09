@@ -56,6 +56,7 @@ class NetworkManager {
             do {
                 // parse response
                 let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601WithFractionalSeconds
                 let decodedResponse = try decoder.decode(returnType, from: data)
                 return decodedResponse
             } catch {

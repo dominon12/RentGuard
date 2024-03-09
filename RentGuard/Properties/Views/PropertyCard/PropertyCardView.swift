@@ -21,9 +21,6 @@ struct PropertyCardView: View {
                     .font(.subheadline)
                 
                 Spacer()
-                
-                Text(property.tenant?.name ?? "No tenant")
-                    .font(.footnote)
             }
             
             Spacer()
@@ -48,13 +45,5 @@ struct PropertyCardView: View {
 }
 
 #Preview {
-    PropertyCardView(property: Property(_id: "",
-                                        name: "My property",
-                                        address: "Calle Remolcador 6, puerta 5",
-                                        images: ["https://www.cpg.nz/Admin/img/products/residential-property.jpeg"],
-                                        documents: [],
-                                        tenant: User(_id: "",
-                                                     email: "email@mail.com",
-                                                     name: "Cristina Lopez",
-                                                     role: .tenant)))
+    PropertyCardView(property: PropertyMockData.sampleProperty)
 }

@@ -18,12 +18,7 @@ struct PropertyDetailsView: View {
 
                     PropertyDataCardView()
                     
-                    if let tenant = property.tenant {
-                        TenantCardView(tenant: tenant)
-                    } else {
-                        AddTenantView()
-                            .padding(.horizontal)
-                    }
+                    ContractView(viewModel: ContractViewModel(propertyId: property._id))
                     
                     PropertyRentabilityView()
                     

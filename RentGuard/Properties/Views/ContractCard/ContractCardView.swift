@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct TenantCardView: View {
-    let tenant: User
+struct ContractCardView: View {
+    let contract: Contract
     
     var body: some View {
-        DataCardView(title: "Tenant",
+        DataCardView(title: "Contract",
                      data: [
-                        ("Name", tenant.name),
-                        ("Contract", "01.09.2022 - 01.09.2024"),
-                        ("Rent", "300$"),
-                        ("Deposit", "300$")
+                        ("Name", contract.tenant.name),
+                        ("Contract", "\(contract.from.formatted(date: .abbreviated, time: .omitted)) - \(contract.until.formatted(date: .abbreviated, time: .omitted))"),
+                        ("Rent", "$\(contract.rent)"),
+                        ("Deposit", "$\(contract.deposit ?? 0)")
                      ],
-                     documents: []) {
+                     documents: contract.documents) {
             HStack(spacing: 24) {
                 Button {
                     
@@ -39,5 +39,5 @@ struct TenantCardView: View {
 }
 
 #Preview {
-    TenantCardView(tenant: PropertyMockData.sampleProperty.tenant!)
+    ContractCardView(contract: ContractMockData.sampleContract)
 }

@@ -13,7 +13,6 @@ struct Property: Codable, Hashable {
     var address: String
     var images: [String]
     var documents: [String]
-    var tenant: User?
     var city: String?
     var postalCode: String?
     var country: String?
@@ -28,10 +27,6 @@ struct PropertyMockData {
                                          address: "C/ Remolcador 6, 5",
                                          images: [],
                                          documents: [],
-                                         tenant: User(_id: "",
-                                                      email: "email@mail.com",
-                                                      name: "Jose Alvarez",
-                                                      role: .tenant),
                                          city: "Valencia",
                                          postalCode: "46009",
                                          country: "Spain",
