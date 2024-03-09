@@ -10,6 +10,8 @@ import SwiftUI
 @MainActor
 final class ContractEnvironment: ObservableObject {
     @Published var contract: Contract?
+    @Published var isCreatingContract = false
+    @Published var isEditingContract = false
     
     func getContract(propertyId: String) async {
         do {

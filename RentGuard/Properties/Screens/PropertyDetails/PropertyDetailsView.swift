@@ -16,6 +16,7 @@ struct PropertyDetailsView: View {
             ScrollView {
                 VStack(spacing: 24) {
                     CarouselView(images: property.images)
+                        .padding(.top)
 
                     PropertyDataCardView()
                     

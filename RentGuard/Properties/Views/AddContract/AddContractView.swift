@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AddContractView: View {
+    @EnvironmentObject private var contractEnv: ContractEnvironment
+    
     var body: some View {
-        NavigationLink {
-            ContractFormView()
-                .navigationTitle("Add Contract")
+        Button {
+            contractEnv.isCreatingContract = true
         } label: {
             Label("Add Contract", systemImage: "person.badge.plus")
                 .frame(maxWidth: .infinity)
@@ -25,4 +26,5 @@ struct AddContractView: View {
 
 #Preview {
     AddContractView()
+        .environmentObject(ContractEnvironment())
 }
