@@ -16,8 +16,8 @@ struct SaveTenantDto: Encodable {
 struct SaveContractDto: Encodable {
     var property: String
     var tenant: SaveTenantDto
-    var from: Date
-    var until: Date
+    var from: String
+    var until: String
     var rent: Float
     var documents: [String]
     var deposit: Float

@@ -12,7 +12,7 @@ struct AddContractView: View {
     
     var body: some View {
         Button {
-            contractEnv.isCreatingContract = true
+            contractEnv.isShowingForm = true
         } label: {
             Label("Add Contract", systemImage: "person.badge.plus")
                 .frame(maxWidth: .infinity)

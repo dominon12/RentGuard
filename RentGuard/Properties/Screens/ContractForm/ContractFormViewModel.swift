@@ -33,6 +33,17 @@ final class ContractFormViewModel: ObservableObject {
     init(propertyId: String, contractEnv: ContractEnvironment) {
         self.propertyId = propertyId
         self.contractEnv = contractEnv
+        
+        if let contract = contractEnv.contract {
+            form = ContractForm(tenant: TenantForm(name: contract.tenant.name,
+                                                   email: contract.tenant.email,
+                                                   govId: contract.tenant.govId ?? ""),
+                                from: contract.from,
+                                until: contract.until,
+                                rent: String(contract.rent),
+                                documents: contract.documents.map({ docUrl in FormField(id: UUID(), value: docUrl)}),
+                                deposit: String(contract.deposit))
+        }
     }
 
     var isValidForm: Bool {
@@ -53,17 +64,22 @@ final class ContractFormViewModel: ObservableObject {
                                       tenant: SaveTenantDto(name: form.tenant.name,
                                                             email: form.tenant.email, 
                                                             govId: form.tenant.govId),
-                                      from: form.from,
-                                      until: form.until,
+                                      from: form.from.ISO8601Format(),
+                                      until: form.until.ISO8601Format(),
                                       rent: Float(form.rent) ?? 0,
-                                      documents: form.documents.map({ field in field.value }),
+                                      documents: form.documents.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
                                       deposit: Float(form.deposit) ?? 0)
         
         isSaving = true
         do {
-            try await ContractsApi.create(payload: payload)
+            if let contract = contractEnv.contract {
+                try await ContractsApi.update(id: contract._id, payload: payload)
+            } else {
+                try await ContractsApi.create(payload: payload)
+            }
+            
             await contractEnv.getContract(propertyId: propertyId)
-            contractEnv.isCreatingContract = false
+            contractEnv.isShowingForm = false
         } catch {
             alert = ContractsAlerts.saveFailed
         }

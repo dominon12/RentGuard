@@ -18,12 +18,12 @@ struct ContractCardView: View {
                             ("Name", contract.tenant.name),
                             ("Contract", "\(contract.from.formatted(date: .abbreviated, time: .omitted)) - \(contract.until.formatted(date: .abbreviated, time: .omitted))"),
                             ("Rent", "$\(contract.rent)"),
-                            ("Deposit", "$\(contract.deposit ?? 0)")
+                            ("Deposit", "$\(contract.deposit)")
                          ],
                          documents: contract.documents) {
                 HStack(spacing: 24) {
                     Button {
-                        
+                        viewModel.contractEnv.isShowingForm = true
                     } label: {
                         Text("Edit")
                     }

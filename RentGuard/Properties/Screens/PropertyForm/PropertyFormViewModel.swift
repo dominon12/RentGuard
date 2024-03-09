@@ -58,8 +58,8 @@ final class PropertyFormViewModel: ObservableObject {
         
         let payload = SavePropertyDto(name: form.name,
                                         address: form.address,
-                                        images: form.images.map({ field in field.value }),
-                                        documents: form.documents.map({ field in field.value }),
+                                        images: form.images.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
+                                        documents: form.documents.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
                                         city: form.city.isEmpty ? nil : form.city,
                                         postalCode: form.postalCode.isEmpty ? nil : form.postalCode,
                                         country: form.country.isEmpty ? nil : form.country,

@@ -14,8 +14,8 @@ struct Contract: Codable {
     var from: Date
     var until: Date
     var rent: Float
+    var deposit: Float
     var documents: [String]
-    var deposit: Float?
 }
 
 struct ContractMockData {
@@ -28,6 +28,6 @@ struct ContractMockData {
                                          from: Date(),
                                          until: Date(),
                                          rent: 208,
-                                         documents: [],
-                                         deposit: 200)
+                                         deposit: 200,
+                                         documents: [])
 }

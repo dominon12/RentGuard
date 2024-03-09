@@ -20,11 +20,11 @@ struct ContractView: View {
                     .padding(.horizontal)
             }
         }
-        .navigationDestination(isPresented: $contractEnv.isCreatingContract) {
+        .navigationDestination(isPresented: $contractEnv.isShowingForm) {
             ContractFormView(viewModel:
                                 ContractFormViewModel(propertyId: propertiesEnv.property?._id ?? "",
                                                       contractEnv: contractEnv))
-                .navigationTitle("Add Contract")
+                .navigationTitle(contractEnv.contract != nil ? "Edit Contract" : "Add Contract")
         }
         .task {
             if let id = propertiesEnv.property?._id {

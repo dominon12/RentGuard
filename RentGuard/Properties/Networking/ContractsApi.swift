@@ -26,4 +26,9 @@ final class ContractsApi: NetworkManager {
         let url = path
         let _ = try await NetworkManager.makeRequest(urlPath: url, payload: payload, withAuth: true, method: "POST")
     }
+    
+    static func update(id: String, payload: SaveContractDto) async throws {
+        let url = path + id
+        let _ = try await NetworkManager.makeRequest(urlPath: url, payload: payload, withAuth: true, method: "PATCH")
+    }
 }

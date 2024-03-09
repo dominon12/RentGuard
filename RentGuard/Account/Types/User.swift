@@ -12,4 +12,5 @@ struct User: Codable, Hashable {
     var email: String
     var name: String
     var role: Role
+    var govId: String?
 }
