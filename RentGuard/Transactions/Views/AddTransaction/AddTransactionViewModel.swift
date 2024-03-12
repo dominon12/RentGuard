@@ -47,7 +47,7 @@ final class AddTransactionViewModel: ObservableObject {
         let payload = CreateTransactionDto(property: propertyId,
                                            type: form.type,
                                            amount: Float(form.amount) ?? 0,
-                                           description: form.description)
+                                           description: form.description.isEmpty ? nil : form.description)
         
         do {
             try await TransactionsApi.create(payload: payload)

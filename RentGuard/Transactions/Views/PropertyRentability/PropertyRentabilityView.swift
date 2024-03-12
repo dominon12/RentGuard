@@ -23,16 +23,7 @@ struct PropertyRentabilityView: View {
             AddTransactionView(viewModel: AddTransactionViewModel(propertyId: propertiesEnv.property?._id ?? "" ,
                                                                   transactionsEnv: transactionsEnv))
             
-            Button {
-                
-            } label: {
-                Label("View History", systemImage: "clock")
-            }
-            .controlSize(.large)
-            .frame(maxWidth: .infinity)
-            .frame(height: 50)
-            .background(.blue.opacity(0.15))
-            .cornerRadius(12)
+            TransactionsHistoryButtonView()
         }
         .padding()
     }
