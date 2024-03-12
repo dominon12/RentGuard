@@ -10,6 +10,7 @@ import SwiftUI
 struct PropertyDetailsView: View {
     @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
     @StateObject private var contractEnv = ContractEnvironment()
+    @StateObject private var transactionsEnv = TransactionsEnvironment()
     
     var body: some View {
         if let property = propertiesEnv.property {
@@ -24,6 +25,7 @@ struct PropertyDetailsView: View {
                         .environmentObject(contractEnv)
                     
                     PropertyRentabilityView()
+                        .environmentObject(transactionsEnv)
                     
                     DeletePropertyView(viewModel: DeletePropertyViewModel(propertiesEnv: propertiesEnv))
                         .padding()

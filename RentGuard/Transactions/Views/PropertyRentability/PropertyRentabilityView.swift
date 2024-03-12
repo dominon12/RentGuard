@@ -14,17 +14,8 @@ struct PropertyRentabilityView: View {
                 .font(.title2)
                 .fontWeight(.semibold)
             
-            DataCardView(title: nil,
-                         data: [
-                            ("Rent", "30000$"),
-                            ("Spent", "2000$"),
-                            ("Rentability", "28000$"),
-                         ],
-                         documents: []) {
-                Text("")
-                    .hidden()
-            }
-                         .padding(.bottom, 10)
+            RentabilityCardView()
+                 .padding(.bottom, 10)
             
             HStack {
                 Button {
@@ -68,4 +59,5 @@ struct PropertyRentabilityView: View {
 
 #Preview {
     PropertyRentabilityView()
+        .environmentObject(TransactionsEnvironment())
 }
