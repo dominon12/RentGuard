@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PropertyRentabilityView: View {
+    @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
+    @EnvironmentObject private var transactionsEnv: TransactionsEnvironment
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Rentability")
@@ -17,30 +20,8 @@ struct PropertyRentabilityView: View {
             RentabilityCardView()
                  .padding(.bottom, 10)
             
-            HStack {
-                Button {
-                    
-                } label: {
-                    Label("Credit", systemImage: "plus.app")
-                }
-                .controlSize(.large)
-                .frame(maxWidth: .infinity, maxHeight: 50)
-                .background(.green.opacity(0.15))
-                .foregroundColor(.green)
-                .cornerRadius(12)
-                
-                Button {
-                    
-                } label: {
-                    Label("Debit", systemImage: "minus.square")
-                }
-                .controlSize(.large)
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .background(.red.opacity(0.15))
-                .foregroundColor(.red)
-                .cornerRadius(12)
-            }
+            AddTransactionView(viewModel: AddTransactionViewModel(propertyId: propertiesEnv.property?._id ?? "" ,
+                                                                  transactionsEnv: transactionsEnv))
             
             Button {
                 
@@ -59,5 +40,6 @@ struct PropertyRentabilityView: View {
 
 #Preview {
     PropertyRentabilityView()
+        .environmentObject(PropertiesEnvironment())
         .environmentObject(TransactionsEnvironment())
 }

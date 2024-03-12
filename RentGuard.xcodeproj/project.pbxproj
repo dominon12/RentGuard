@@ -26,6 +26,8 @@
 		BD9DBB892BA0B8EE00EBDDCC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB882BA0B8EE00EBDDCC /* Transaction.swift */; };
 		BD9DBB8B2BA0BD2100EBDDCC /* TransactionsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB8A2BA0BD2100EBDDCC /* TransactionsEnvironment.swift */; };
 		BD9DBB8E2BA0BD9D00EBDDCC /* RentabilityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB8D2BA0BD9D00EBDDCC /* RentabilityCardView.swift */; };
+		BD9DBB912BA0BEF900EBDDCC /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB902BA0BEF900EBDDCC /* AddTransactionView.swift */; };
+		BD9DBB932BA0BF8800EBDDCC /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB922BA0BF8800EBDDCC /* AddTransactionViewModel.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		BD9DBB882BA0B8EE00EBDDCC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BD9DBB8A2BA0BD2100EBDDCC /* TransactionsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsEnvironment.swift; sourceTree = "<group>"; };
 		BD9DBB8D2BA0BD9D00EBDDCC /* RentabilityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentabilityCardView.swift; sourceTree = "<group>"; };
+		BD9DBB902BA0BEF900EBDDCC /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		BD9DBB922BA0BF8800EBDDCC /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 		BD9DBB7B2BA0B6BC00EBDDCC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD9DBB8F2BA0BEF000EBDDCC /* AddTransaction */,
 				BD9DBB8C2BA0BD9200EBDDCC /* RentabilityCard */,
 				BDDC8EEA2B98F1EA0019199C /* PropertyRentability */,
 			);
@@ -331,6 +336,15 @@
 				BD9DBB8D2BA0BD9D00EBDDCC /* RentabilityCardView.swift */,
 			);
 			path = RentabilityCard;
+			sourceTree = "<group>";
+		};
+		BD9DBB8F2BA0BEF000EBDDCC /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				BD9DBB902BA0BEF900EBDDCC /* AddTransactionView.swift */,
+				BD9DBB922BA0BF8800EBDDCC /* AddTransactionViewModel.swift */,
+			);
+			path = AddTransaction;
 			sourceTree = "<group>";
 		};
 		BDDC8E502B8E3EB40019199C = {
@@ -809,6 +823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9DBB912BA0BEF900EBDDCC /* AddTransactionView.swift in Sources */,
 				BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */,
 				BDDC8E8A2B8F8ACB0019199C /* NetworkManager.swift in Sources */,
 				BDDC8E8E2B8F8B310019199C /* UserApi.swift in Sources */,
@@ -827,6 +842,7 @@
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
 				BD9DBB8E2BA0BD9D00EBDDCC /* RentabilityCardView.swift in Sources */,
 				BDDC8EE02B98E5590019199C /* DataCardView.swift in Sources */,
+				BD9DBB932BA0BF8800EBDDCC /* AddTransactionViewModel.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
 				BDDC8EF92B9A3DCF0019199C /* ContractFormView.swift in Sources */,
 				BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */,
