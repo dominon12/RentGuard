@@ -7,14 +7,22 @@
 
 import SwiftUI
 
+@MainActor
 struct TransactionsHistoryView: View {
     @EnvironmentObject private var propertiesEnv: PropertiesEnvironment
     @StateObject private var viewModel = TransactionsHistoryViewModel()
     
     var body: some View {
         ZStack {
-            List(viewModel.transactions, id: \._id) { transaction in
-                TransactionCellView(viewModel: TransactionCellViewModel(transaction: transaction))
+            List {
+                ForEach(viewModel.transactions, id: \._id) { transaction in
+                    TransactionCellView(viewModel: TransactionCellViewModel(transaction: transaction))
+                }
+                .onDelete(perform: { indexSet in
+                    Task {
+                        await viewModel.deleteTransactions(at: indexSet, propertyId: propertiesEnv.property?._id ?? "")
+                    }
+                })
             }
             
             if viewModel.transactions.isEmpty {

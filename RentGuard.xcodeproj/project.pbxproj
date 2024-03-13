@@ -33,6 +33,7 @@
 		BD9DBB9D2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB9C2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift */; };
 		BD9DBBA02BA0CBCF00EBDDCC /* TransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB9F2BA0CBCF00EBDDCC /* TransactionCellView.swift */; };
 		BD9DBBA22BA0CBDA00EBDDCC /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBA12BA0CBDA00EBDDCC /* TransactionCellViewModel.swift */; };
+		BD9DBBA42BA0D41B00EBDDCC /* TransactionsAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBA32BA0D41B00EBDDCC /* TransactionsAlerts.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		BD9DBB9C2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryViewModel.swift; sourceTree = "<group>"; };
 		BD9DBB9F2BA0CBCF00EBDDCC /* TransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellView.swift; sourceTree = "<group>"; };
 		BD9DBBA12BA0CBDA00EBDDCC /* TransactionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModel.swift; sourceTree = "<group>"; };
+		BD9DBBA32BA0D41B00EBDDCC /* TransactionsAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAlerts.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 		BD9DBB7E2BA0B6CF00EBDDCC /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				BD9DBBA32BA0D41B00EBDDCC /* TransactionsAlerts.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BD9DBB872BA0B86300EBDDCC /* TransactionType.swift in Sources */,
 				BD9DBB812BA0B72400EBDDCC /* TransactionsApi.swift in Sources */,
+				BD9DBBA42BA0D41B00EBDDCC /* TransactionsAlerts.swift in Sources */,
 				BD2970832B9CE6C700055870 /* SaveContractDto.swift in Sources */,
 				BD9DBB892BA0B8EE00EBDDCC /* Transaction.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
