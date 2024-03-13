@@ -17,7 +17,7 @@ final class HomeViewModel {
     func getUser() async {
         isLoading = true
         do {
-            user = try await UserApi.current()
+            user = try await AccountApi.current()
         } catch {
             
         }

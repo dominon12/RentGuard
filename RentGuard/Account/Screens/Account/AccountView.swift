@@ -9,13 +9,17 @@ import SwiftUI
 import Auth0
 
 struct AccountView: View {
-    @EnvironmentObject private var authManager: AuthManager
-    
     var body: some View {
-        Button {
-            authManager.logout()
-        } label: {
-            Text("Log out")
+        NavigationStack {
+            VStack {
+                ProfileFormView()
+                
+//                Spacer()
+                
+                LogoutButtonView()
+                    .padding(.bottom)
+            }
+            .navigationTitle("Profile")
         }
     }
 }

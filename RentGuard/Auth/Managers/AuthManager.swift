@@ -59,7 +59,7 @@ final class AuthManager: ObservableObject {
         let payload = CreateUserDto(name: name, email: email, role: .owner)
 
         do {
-            try await UserApi.create(payload)
+            try await AccountApi.create(payload)
         } catch {
             print("Error creating user in db")
         }
