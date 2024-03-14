@@ -19,21 +19,6 @@
 		BD29707E2B9CE42200055870 /* TenantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29707D2B9CE42200055870 /* TenantFormView.swift */; };
 		BD2970812B9CE4BA00055870 /* ContractDataFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970802B9CE4BA00055870 /* ContractDataFormView.swift */; };
 		BD2970832B9CE6C700055870 /* SaveContractDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2970822B9CE6C600055870 /* SaveContractDto.swift */; };
-		BD9DBB812BA0B72400EBDDCC /* TransactionsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB802BA0B72400EBDDCC /* TransactionsApi.swift */; };
-		BD9DBB832BA0B7B100EBDDCC /* PropertyBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB822BA0B7B100EBDDCC /* PropertyBalance.swift */; };
-		BD9DBB852BA0B84600EBDDCC /* CreateTransactionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB842BA0B84600EBDDCC /* CreateTransactionDto.swift */; };
-		BD9DBB872BA0B86300EBDDCC /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB862BA0B86300EBDDCC /* TransactionType.swift */; };
-		BD9DBB892BA0B8EE00EBDDCC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB882BA0B8EE00EBDDCC /* Transaction.swift */; };
-		BD9DBB8B2BA0BD2100EBDDCC /* TransactionsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB8A2BA0BD2100EBDDCC /* TransactionsEnvironment.swift */; };
-		BD9DBB8E2BA0BD9D00EBDDCC /* RentabilityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB8D2BA0BD9D00EBDDCC /* RentabilityCardView.swift */; };
-		BD9DBB912BA0BEF900EBDDCC /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB902BA0BEF900EBDDCC /* AddTransactionView.swift */; };
-		BD9DBB932BA0BF8800EBDDCC /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB922BA0BF8800EBDDCC /* AddTransactionViewModel.swift */; };
-		BD9DBB982BA0CAF800EBDDCC /* TransactionsHistoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB972BA0CAF800EBDDCC /* TransactionsHistoryButtonView.swift */; };
-		BD9DBB9B2BA0CB2D00EBDDCC /* TransactionsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB9A2BA0CB2D00EBDDCC /* TransactionsHistoryView.swift */; };
-		BD9DBB9D2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB9C2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift */; };
-		BD9DBBA02BA0CBCF00EBDDCC /* TransactionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBB9F2BA0CBCF00EBDDCC /* TransactionCellView.swift */; };
-		BD9DBBA22BA0CBDA00EBDDCC /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBA12BA0CBDA00EBDDCC /* TransactionCellViewModel.swift */; };
-		BD9DBBA42BA0D41B00EBDDCC /* TransactionsAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBA32BA0D41B00EBDDCC /* TransactionsAlerts.swift */; };
 		BD9DBBA72BA2192000EBDDCC /* LogoutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBA62BA2192000EBDDCC /* LogoutButtonView.swift */; };
 		BD9DBBAB2BA2198C00EBDDCC /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBAA2BA2198C00EBDDCC /* ProfileFormView.swift */; };
 		BD9DBBAD2BA219A700EBDDCC /* ProfileFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBAC2BA219A700EBDDCC /* ProfileFormViewModel.swift */; };
@@ -88,7 +73,6 @@
 		BDDC8EE32B98F0840019199C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE22B98F0840019199C /* CarouselView.swift */; };
 		BDDC8EE62B98F0BD0019199C /* PropertyDataCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE52B98F0BD0019199C /* PropertyDataCardView.swift */; };
 		BDDC8EE92B98F1470019199C /* ContractCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EE82B98F1470019199C /* ContractCardView.swift */; };
-		BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */; };
 		BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */; };
 		BDDC8EF52B9A3DB10019199C /* AddContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF42B9A3DB10019199C /* AddContractView.swift */; };
 		BDDC8EF92B9A3DCF0019199C /* ContractFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EF82B9A3DCF0019199C /* ContractFormView.swift */; };
@@ -108,21 +92,6 @@
 		BD29707D2B9CE42200055870 /* TenantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantFormView.swift; sourceTree = "<group>"; };
 		BD2970802B9CE4BA00055870 /* ContractDataFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDataFormView.swift; sourceTree = "<group>"; };
 		BD2970822B9CE6C600055870 /* SaveContractDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContractDto.swift; sourceTree = "<group>"; };
-		BD9DBB802BA0B72400EBDDCC /* TransactionsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsApi.swift; sourceTree = "<group>"; };
-		BD9DBB822BA0B7B100EBDDCC /* PropertyBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyBalance.swift; sourceTree = "<group>"; };
-		BD9DBB842BA0B84600EBDDCC /* CreateTransactionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionDto.swift; sourceTree = "<group>"; };
-		BD9DBB862BA0B86300EBDDCC /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
-		BD9DBB882BA0B8EE00EBDDCC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		BD9DBB8A2BA0BD2100EBDDCC /* TransactionsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsEnvironment.swift; sourceTree = "<group>"; };
-		BD9DBB8D2BA0BD9D00EBDDCC /* RentabilityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentabilityCardView.swift; sourceTree = "<group>"; };
-		BD9DBB902BA0BEF900EBDDCC /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
-		BD9DBB922BA0BF8800EBDDCC /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
-		BD9DBB972BA0CAF800EBDDCC /* TransactionsHistoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryButtonView.swift; sourceTree = "<group>"; };
-		BD9DBB9A2BA0CB2D00EBDDCC /* TransactionsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryView.swift; sourceTree = "<group>"; };
-		BD9DBB9C2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryViewModel.swift; sourceTree = "<group>"; };
-		BD9DBB9F2BA0CBCF00EBDDCC /* TransactionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellView.swift; sourceTree = "<group>"; };
-		BD9DBBA12BA0CBDA00EBDDCC /* TransactionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModel.swift; sourceTree = "<group>"; };
-		BD9DBBA32BA0D41B00EBDDCC /* TransactionsAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAlerts.swift; sourceTree = "<group>"; };
 		BD9DBBA62BA2192000EBDDCC /* LogoutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButtonView.swift; sourceTree = "<group>"; };
 		BD9DBBAA2BA2198C00EBDDCC /* ProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormView.swift; sourceTree = "<group>"; };
 		BD9DBBAC2BA219A700EBDDCC /* ProfileFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormViewModel.swift; sourceTree = "<group>"; };
@@ -177,7 +146,6 @@
 		BDDC8EE22B98F0840019199C /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		BDDC8EE52B98F0BD0019199C /* PropertyDataCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDataCardView.swift; sourceTree = "<group>"; };
 		BDDC8EE82B98F1470019199C /* ContractCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractCardView.swift; sourceTree = "<group>"; };
-		BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRentabilityView.swift; sourceTree = "<group>"; };
 		BDDC8EEE2B98F5F10019199C /* DeletePropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePropertyView.swift; sourceTree = "<group>"; };
 		BDDC8EF42B9A3DB10019199C /* AddContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContractView.swift; sourceTree = "<group>"; };
 		BDDC8EF82B9A3DCF0019199C /* ContractFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractFormView.swift; sourceTree = "<group>"; };
@@ -300,117 +268,6 @@
 				BDDC8EF72B9A3DC50019199C /* ContractForm */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		BD9DBB792BA0B6AB00EBDDCC /* Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB7F2BA0B71200EBDDCC /* Types */,
-				BD9DBB7E2BA0B6CF00EBDDCC /* Alerts */,
-				BD9DBB7D2BA0B6C500EBDDCC /* Environment */,
-				BD9DBB7C2BA0B6C000EBDDCC /* Networking */,
-				BD9DBB7B2BA0B6BC00EBDDCC /* Views */,
-				BD9DBB7A2BA0B6B700EBDDCC /* Screens */,
-			);
-			path = Transactions;
-			sourceTree = "<group>";
-		};
-		BD9DBB7A2BA0B6B700EBDDCC /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB992BA0CB2400EBDDCC /* TransactionsHistory */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		BD9DBB7B2BA0B6BC00EBDDCC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB9E2BA0CBC300EBDDCC /* TransactionCell */,
-				BD9DBB962BA0CAEC00EBDDCC /* TransactionsHistoryButton */,
-				BD9DBB8F2BA0BEF000EBDDCC /* AddTransaction */,
-				BD9DBB8C2BA0BD9200EBDDCC /* RentabilityCard */,
-				BDDC8EEA2B98F1EA0019199C /* PropertyRentability */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BD9DBB7C2BA0B6C000EBDDCC /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB802BA0B72400EBDDCC /* TransactionsApi.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		BD9DBB7D2BA0B6C500EBDDCC /* Environment */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB8A2BA0BD2100EBDDCC /* TransactionsEnvironment.swift */,
-			);
-			path = Environment;
-			sourceTree = "<group>";
-		};
-		BD9DBB7E2BA0B6CF00EBDDCC /* Alerts */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBBA32BA0D41B00EBDDCC /* TransactionsAlerts.swift */,
-			);
-			path = Alerts;
-			sourceTree = "<group>";
-		};
-		BD9DBB7F2BA0B71200EBDDCC /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB822BA0B7B100EBDDCC /* PropertyBalance.swift */,
-				BD9DBB842BA0B84600EBDDCC /* CreateTransactionDto.swift */,
-				BD9DBB862BA0B86300EBDDCC /* TransactionType.swift */,
-				BD9DBB882BA0B8EE00EBDDCC /* Transaction.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		BD9DBB8C2BA0BD9200EBDDCC /* RentabilityCard */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB8D2BA0BD9D00EBDDCC /* RentabilityCardView.swift */,
-			);
-			path = RentabilityCard;
-			sourceTree = "<group>";
-		};
-		BD9DBB8F2BA0BEF000EBDDCC /* AddTransaction */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB902BA0BEF900EBDDCC /* AddTransactionView.swift */,
-				BD9DBB922BA0BF8800EBDDCC /* AddTransactionViewModel.swift */,
-			);
-			path = AddTransaction;
-			sourceTree = "<group>";
-		};
-		BD9DBB962BA0CAEC00EBDDCC /* TransactionsHistoryButton */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB972BA0CAF800EBDDCC /* TransactionsHistoryButtonView.swift */,
-			);
-			path = TransactionsHistoryButton;
-			sourceTree = "<group>";
-		};
-		BD9DBB992BA0CB2400EBDDCC /* TransactionsHistory */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB9A2BA0CB2D00EBDDCC /* TransactionsHistoryView.swift */,
-				BD9DBB9C2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift */,
-			);
-			path = TransactionsHistory;
-			sourceTree = "<group>";
-		};
-		BD9DBB9E2BA0CBC300EBDDCC /* TransactionCell */ = {
-			isa = PBXGroup;
-			children = (
-				BD9DBB9F2BA0CBCF00EBDDCC /* TransactionCellView.swift */,
-				BD9DBBA12BA0CBDA00EBDDCC /* TransactionCellViewModel.swift */,
-			);
-			path = TransactionCell;
 			sourceTree = "<group>";
 		};
 		BD9DBBA52BA2191400EBDDCC /* Views */ = {
@@ -537,7 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9DBBB52BA3774800EBDDCC /* Invoices */,
-				BD9DBB792BA0B6AB00EBDDCC /* Transactions */,
 				BD57597A2B9DD8CA00F747DD /* Contracts */,
 				BD2970712B9C94C200055870 /* Extensions */,
 				BDDC8ED32B9782310019199C /* Alert */,
@@ -886,14 +742,6 @@
 			path = ContractCard;
 			sourceTree = "<group>";
 		};
-		BDDC8EEA2B98F1EA0019199C /* PropertyRentability */ = {
-			isa = PBXGroup;
-			children = (
-				BDDC8EEB2B98F1FB0019199C /* PropertyRentabilityView.swift */,
-			);
-			path = PropertyRentability;
-			sourceTree = "<group>";
-		};
 		BDDC8EED2B98F5E80019199C /* DeleteProperty */ = {
 			isa = PBXGroup;
 			children = (
@@ -997,14 +845,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD9DBB912BA0BEF900EBDDCC /* AddTransactionView.swift in Sources */,
 				BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */,
 				BD9DBBC22BA377FB00EBDDCC /* UpdateInvoiceDto.swift in Sources */,
 				BD9DBBA72BA2192000EBDDCC /* LogoutButtonView.swift in Sources */,
 				BDDC8E8A2B8F8ACB0019199C /* NetworkManager.swift in Sources */,
 				BDDC8E8E2B8F8B310019199C /* AccountApi.swift in Sources */,
 				BD9DBBB22BA21AAC00EBDDCC /* AccountAlerts.swift in Sources */,
-				BD9DBB982BA0CAF800EBDDCC /* TransactionsHistoryButtonView.swift in Sources */,
 				BD9DBBCA2BA3790B00EBDDCC /* InvoicesButtonView.swift in Sources */,
 				BDDC8EE62B98F0BD0019199C /* PropertyDataCardView.swift in Sources */,
 				BDDC8E9F2B922E0A0019199C /* AlertsListView.swift in Sources */,
@@ -1015,28 +861,19 @@
 				BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */,
 				BD9DBBBB2BA3777500EBDDCC /* InvoicesApi.swift in Sources */,
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
-				BD9DBB872BA0B86300EBDDCC /* TransactionType.swift in Sources */,
-				BD9DBB812BA0B72400EBDDCC /* TransactionsApi.swift in Sources */,
-				BD9DBBA42BA0D41B00EBDDCC /* TransactionsAlerts.swift in Sources */,
 				BD2970832B9CE6C700055870 /* SaveContractDto.swift in Sources */,
-				BD9DBB892BA0B8EE00EBDDCC /* Transaction.swift in Sources */,
 				BDDC8E872B8F7D710019199C /* AuthManager.swift in Sources */,
-				BD9DBB8E2BA0BD9D00EBDDCC /* RentabilityCardView.swift in Sources */,
 				BDDC8EE02B98E5590019199C /* DataCardView.swift in Sources */,
-				BD9DBB932BA0BF8800EBDDCC /* AddTransactionViewModel.swift in Sources */,
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
 				BDDC8EF92B9A3DCF0019199C /* ContractFormView.swift in Sources */,
 				BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */,
 				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
 				BD9DBBC02BA377AD00EBDDCC /* InvoiceType.swift in Sources */,
 				BD2970772B9C9B0100055870 /* ContractsAlerts.swift in Sources */,
-				BD9DBB8B2BA0BD2100EBDDCC /* TransactionsEnvironment.swift in Sources */,
 				BDDC8E752B8E43D30019199C /* AccountView.swift in Sources */,
 				BD29706E2B9C905600055870 /* Contract.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
-				BD9DBB9B2BA0CB2D00EBDDCC /* TransactionsHistoryView.swift in Sources */,
 				BD9DBBC42BA3782F00EBDDCC /* Invoice.swift in Sources */,
-				BD9DBBA22BA0CBDA00EBDDCC /* TransactionCellViewModel.swift in Sources */,
 				BDDC8E982B90DB130019199C /* User.swift in Sources */,
 				BDDC8E912B8F8B820019199C /* CreateUserDto.swift in Sources */,
 				BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */,
@@ -1050,22 +887,17 @@
 				BD9DBBBE2BA3779300EBDDCC /* CreateInvoiceDto.swift in Sources */,
 				BDDC8E6C2B8E435E0019199C /* MainView.swift in Sources */,
 				BDDC8EC72B9766990019199C /* PropertyFormView.swift in Sources */,
-				BD9DBBA02BA0CBCF00EBDDCC /* TransactionCellView.swift in Sources */,
 				BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */,
-				BD9DBB852BA0B84600EBDDCC /* CreateTransactionDto.swift in Sources */,
 				BDDC8E962B8F8CEF0019199C /* NetworkError.swift in Sources */,
 				BDDC8EE32B98F0840019199C /* CarouselView.swift in Sources */,
 				BDDC8EAE2B9253BA0019199C /* AlertsApi.swift in Sources */,
 				BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */,
 				BDDC8ECF2B9776E30019199C /* PropertyDataFormView.swift in Sources */,
 				BD9DBBAD2BA219A700EBDDCC /* ProfileFormViewModel.swift in Sources */,
-				BDDC8EEC2B98F1FB0019199C /* PropertyRentabilityView.swift in Sources */,
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
-				BD9DBB832BA0B7B100EBDDCC /* PropertyBalance.swift in Sources */,
 				BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */,
 				BD29707E2B9CE42200055870 /* TenantFormView.swift in Sources */,
 				BDDC8EA52B9232BE0019199C /* AlertListViewModel.swift in Sources */,
-				BD9DBB9D2BA0CB3D00EBDDCC /* TransactionsHistoryViewModel.swift in Sources */,
 				BD2970812B9CE4BA00055870 /* ContractDataFormView.swift in Sources */,
 				BD2970752B9C9A5300055870 /* ContractCardViewModel.swift in Sources */,
 				BD29706A2B9C8F6600055870 /* ContractView.swift in Sources */,
