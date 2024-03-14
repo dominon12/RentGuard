@@ -14,7 +14,12 @@ struct ContractView: View {
     var body: some View {
         ZStack {
             if contractEnv.contract != nil {
-                ContractCardView(viewModel: ContractCardViewModel(contractEnv: contractEnv))
+                VStack {
+                    ContractCardView(viewModel: ContractCardViewModel(contractEnv: contractEnv))
+                    
+                    InvoicesButtonView()
+                        .padding()
+                }
             } else {
                 AddContractView()
                     .padding(.horizontal)

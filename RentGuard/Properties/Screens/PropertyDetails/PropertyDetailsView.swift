@@ -24,9 +24,6 @@ struct PropertyDetailsView: View {
                     ContractView()
                         .environmentObject(contractEnv)
                     
-                    PropertyRentabilityView()
-                        .environmentObject(transactionsEnv)
-                    
                     DeletePropertyView(viewModel: DeletePropertyViewModel(propertiesEnv: propertiesEnv))
                         .padding()
                 }
