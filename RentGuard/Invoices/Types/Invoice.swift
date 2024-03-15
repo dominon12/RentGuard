@@ -14,4 +14,14 @@ struct Invoice: Decodable {
     var wasPaid: Bool
     var dueDate: Date
     var createdAt: Date
+    var description: String?
+}
+
+struct InvoiceMockData {
+    static let sampleInvoice = Invoice(_id: "",
+                                       type: .rent,
+                                       amount: 300,
+                                       wasPaid: false,
+                                       dueDate: Date(),
+                                       createdAt: Date())
 }

@@ -8,8 +8,8 @@
 import Foundation
 
 struct UpdateInvoiceDto: Encodable {
-    var type: InvoiceType
-    var amount: Float
-    var wasPaid: Bool
-    var dueDate: Date
+    var type: InvoiceType?
+    var amount: Float?
+    var wasPaid: Bool?
+    var dueDate: Date?
 }

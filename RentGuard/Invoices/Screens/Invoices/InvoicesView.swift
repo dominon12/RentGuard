@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct InvoicesView: View {
+    @EnvironmentObject private var invoiceEnv: InvoiceEnvironment
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        InvoicesListView()
+            .alert(item: $invoiceEnv.alert) { alert in
+                Alert(title: alert.title,
+                      message: alert.message,
+                      dismissButton: alert.dismissButton)
+            }
     }
 }
 
 #Preview {
     InvoicesView()
+        .environmentObject(InvoiceEnvironment())
 }
