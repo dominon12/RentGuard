@@ -26,4 +26,16 @@ final class InvoiceEnvironment: ObservableObject {
             alert = InvoiceAlerts.updateFailed
         }
     }
+    
+    func deleteInvoice(at indexSet: IndexSet, contractId: String) async {
+        do {
+            for i in indexSet {
+                let invoice = invoices[i]
+                try await InvoicesApi.delete(id: invoice._id)
+            }
+            await getInvoices(contractId: contractId)
+        } catch {
+            alert = InvoiceAlerts.deleteFailed
+        }
+    }
 }

@@ -41,6 +41,11 @@ struct InvoicesListView: View {
                     ForEach(filteredInvoices, id: \._id) { invoice in
                         InvoiceCellView(viewModel: InvoiceCellViewModel(invoice: invoice, invoiceEnv: invoiceEnv))
                     }
+                    .onDelete(perform: { indexSet in
+                        Task {
+                            await invoiceEnv.deleteInvoice(at: indexSet, contractId: contractEnv.contract?._id ?? "")
+                        }
+                    })
                 }
             }
         }

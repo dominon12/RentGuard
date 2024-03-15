@@ -25,4 +25,9 @@ class InvoicesApi: NetworkManager {
         let data = try await NetworkManager.makeRequest(urlPath: url, withAuth: true)
         return try NetworkManager.decodeResponse(data, returnType: [Invoice].self)
     }
+    
+    static func delete(id: String) async throws {
+        let url = InvoicesApi.path + id
+        let _ = try await NetworkManager.makeRequest(urlPath: url, withAuth: true, method: "DELETE")
+    }
 }
