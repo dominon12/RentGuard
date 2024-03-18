@@ -37,6 +37,8 @@
 		BD9DBBD52BA3809200EBDDCC /* InvoiceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBD42BA3809200EBDDCC /* InvoiceCellViewModel.swift */; };
 		BD9DBBD72BA4C5AA00EBDDCC /* InvoiceAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBD62BA4C5AA00EBDDCC /* InvoiceAlerts.swift */; };
 		BD9DBBDA2BA4C7C100EBDDCC /* InvoiceEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBD92BA4C7C100EBDDCC /* InvoiceEnvironment.swift */; };
+		BD9DBBDD2BA4CD0700EBDDCC /* InvoiceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBDC2BA4CD0700EBDDCC /* InvoiceFormView.swift */; };
+		BD9DBBDF2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBDE2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -116,6 +118,8 @@
 		BD9DBBD42BA3809200EBDDCC /* InvoiceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceCellViewModel.swift; sourceTree = "<group>"; };
 		BD9DBBD62BA4C5AA00EBDDCC /* InvoiceAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceAlerts.swift; sourceTree = "<group>"; };
 		BD9DBBD92BA4C7C100EBDDCC /* InvoiceEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceEnvironment.swift; sourceTree = "<group>"; };
+		BD9DBBDC2BA4CD0700EBDDCC /* InvoiceFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFormView.swift; sourceTree = "<group>"; };
+		BD9DBBDE2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFormViewModel.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 		BD9DBBB72BA3775300EBDDCC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD9DBBDB2BA4CCFB00EBDDCC /* InvoiceForm */,
 				BD9DBBD02BA37CB100EBDDCC /* InvoiceCell */,
 				BD9DBBCB2BA37B0C00EBDDCC /* InvoicesList */,
 				BD9DBBC82BA378FA00EBDDCC /* InvoicesButton */,
@@ -414,6 +419,15 @@
 				BD9DBBD92BA4C7C100EBDDCC /* InvoiceEnvironment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		BD9DBBDB2BA4CCFB00EBDDCC /* InvoiceForm */ = {
+			isa = PBXGroup;
+			children = (
+				BD9DBBDC2BA4CD0700EBDDCC /* InvoiceFormView.swift */,
+				BD9DBBDE2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift */,
+			);
+			path = InvoiceForm;
 			sourceTree = "<group>";
 		};
 		BDDC8E502B8E3EB40019199C = {
@@ -889,6 +903,7 @@
 			files = (
 				BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */,
 				BD9DBBD22BA37CC800EBDDCC /* InvoiceCellView.swift in Sources */,
+				BD9DBBDD2BA4CD0700EBDDCC /* InvoiceFormView.swift in Sources */,
 				BD9DBBC22BA377FB00EBDDCC /* UpdateInvoiceDto.swift in Sources */,
 				BD9DBBA72BA2192000EBDDCC /* LogoutButtonView.swift in Sources */,
 				BDDC8E8A2B8F8ACB0019199C /* NetworkManager.swift in Sources */,
@@ -910,6 +925,7 @@
 				BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */,
 				BDDC8EF92B9A3DCF0019199C /* ContractFormView.swift in Sources */,
 				BD2970672B9B589300055870 /* PropertiesEnvironment.swift in Sources */,
+				BD9DBBDF2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift in Sources */,
 				BDDC8EBD2B9641680019199C /* Property.swift in Sources */,
 				BD9DBBC02BA377AD00EBDDCC /* InvoiceType.swift in Sources */,
 				BD2970772B9C9B0100055870 /* ContractsAlerts.swift in Sources */,

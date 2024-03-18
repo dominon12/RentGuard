@@ -7,12 +7,13 @@
 
 import Foundation
 
+@MainActor
 class InvoicesApi: NetworkManager {
     static let path = "invoices/"
     
     static func create(_ payload: CreateInvoiceDto) async throws {
         let url = InvoicesApi.path
-        let _ = try await NetworkManager.makeRequest(urlPath: url, payload: payload, method: "POST")
+        let _ = try await NetworkManager.makeRequest(urlPath: url, payload: payload, withAuth: true, method: "POST")
     }
     
     static func update(id: String, payload: UpdateInvoiceDto) async throws {

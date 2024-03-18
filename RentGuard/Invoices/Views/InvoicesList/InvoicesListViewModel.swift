@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-enum InvoiceListType: String {
-    case paid = "paid"
-    case unpaid = "unpaid"
-}
 
 @MainActor
 final class InvoicesListViewModel: ObservableObject {
-    @Published var selectedTab: InvoiceListType = .unpaid
-    
-
+    @Published var showPaid = false
+    @Published var isCreatingInvoice = false
 }

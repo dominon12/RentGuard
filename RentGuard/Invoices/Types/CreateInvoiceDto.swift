@@ -11,5 +11,7 @@ struct CreateInvoiceDto: Encodable {
     var contract: String
     var type: InvoiceType
     var amount: Float
-    var dueDate: Date
+    var dueDate: String
+    var wasPaid: Bool
+    var description: String?
 }

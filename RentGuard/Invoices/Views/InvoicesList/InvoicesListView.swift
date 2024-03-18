@@ -14,22 +14,16 @@ struct InvoicesListView: View {
     
     var filteredInvoices: [Invoice] {
         invoiceEnv.invoices.filter { invoice in
-            switch viewModel.selectedTab {
-            case .paid:
-                invoice.wasPaid
-            case .unpaid:
-                !invoice.wasPaid
-            }
+            invoice.wasPaid == viewModel.showPaid
         }
     }
     
     var body: some View {
         VStack {
             Picker("What kind of invoices do you want to see?",
-                   selection: $viewModel.selectedTab) {
-                Text("Unpaid").tag(InvoiceListType.unpaid)
-                
-                Text("Paid").tag(InvoiceListType.paid)
+                   selection: $viewModel.showPaid) {
+                Text("Unpaid").tag(false)
+                Text("Paid").tag(true)
             }
            .pickerStyle(.segmented)
            .padding()
@@ -49,6 +43,18 @@ struct InvoicesListView: View {
                 }
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    viewModel.isCreatingInvoice = true
+                } label: {
+                    Text("Add")
+                }
+            }
+        }
+        .sheet(isPresented: $viewModel.isCreatingInvoice, content: {
+            InvoiceFormView(viewModel: InvoiceFormViewModel(invoiceEnv: invoiceEnv, showForm: $viewModel.isCreatingInvoice))
+        })
         .task {
             await invoiceEnv.getInvoices(contractId: contractEnv.contract?._id ?? "")
         }
@@ -58,4 +64,5 @@ struct InvoicesListView: View {
 #Preview {
     InvoicesListView()
         .environmentObject(ContractEnvironment())
+        .environmentObject(InvoiceEnvironment())
 }
