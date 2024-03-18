@@ -7,20 +7,13 @@
 
 import Foundation
 
-enum AlertListType: String {
-    case today = "today"
-    case next = "next"
-}
-
 @MainActor
 final class AlertsApi: NetworkManager {
     static let path = "alerts/"
     
-    static func getAlerts(type: AlertListType) async throws -> [UserAlert] {
+    static func getAlerts() async throws -> [UserAlert] {
         let url = path
-        let data = try await AlertsApi.makeRequest(urlPath: url,
-                                                   query: [URLQueryItem(name: "type", value: type.rawValue)],
-                                                   withAuth: true)
+        let data = try await AlertsApi.makeRequest(urlPath: url, withAuth: true)
         return try NetworkManager.decodeResponse(data, returnType: [UserAlert].self)
     }
 }

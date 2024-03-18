@@ -9,18 +9,13 @@ import Foundation
 
 @MainActor
 final class AlertListViewModel: ObservableObject {
-    @Published var selectedTab: AlertListType = .today
     @Published var alerts = [UserAlert]()
-    @Published var isLoading = false
     
     func getAlerts() async {
-        isLoading = true
         do {
-            alerts = try await AlertsApi.getAlerts(type: selectedTab)
-            print(alerts)
+            alerts = try await AlertsApi.getAlerts()
         } catch {
             print(error)
         }
-        isLoading = false
     }
 }
