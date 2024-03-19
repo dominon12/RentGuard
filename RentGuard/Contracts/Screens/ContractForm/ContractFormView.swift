@@ -13,11 +13,15 @@ struct ContractFormView: View {
     var body: some View {
         ZStack {
             Form {
-                Section(header: Text("Tenant")) {
+                Section(header: Text("Tenant"), 
+                        footer: Text("We will notify tenant about new invoices by email.")
+                            .font(.caption)
+                            .foregroundColor(.secondary),
+                        content: {
                     TenantFormView(tenant: $viewModel.form.tenant)
-                }
+                })
                 
-                Section(header: Text("Data")) {
+                Section(header: Text("Data"), footer: Text("You will be notified 1 month before the contract finishes.")) {
                     ContractDataFormView(form: $viewModel.form)
                 }
                 
@@ -25,7 +29,6 @@ struct ContractFormView: View {
                     DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
                 }
             }
-            
             
             if viewModel.isSaving {
                 LoadingView(opacity: 0.6)

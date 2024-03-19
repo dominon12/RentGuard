@@ -49,6 +49,7 @@ final class ContractFormViewModel: ObservableObject {
     var isValidForm: Bool {
         guard !form.tenant.name.isEmpty &&
                 !form.tenant.email.isEmpty &&
+                form.tenant.email.isValidEmail &&
                 Float(form.rent) != nil &&
                 Float(form.deposit) != nil else {
             alert = ContractsAlerts.formInvalid

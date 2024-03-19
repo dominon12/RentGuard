@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct Contract: Codable {
+struct Tenant: Decodable {
+    var name: String
+    var email: String
+    var govId: String?
+}
+
+struct Contract: Decodable {
     var _id: String
     var property: String
-    var tenant: User
+    var tenant: Tenant
     var from: Date
     var until: Date
     var rent: Float
@@ -20,11 +26,9 @@ struct Contract: Codable {
 
 struct ContractMockData {
     static let sampleContract = Contract(_id: "", 
-                                         property: "", 
-                                         tenant: User(_id: "",
-                                                      email: "twinbatshole@gmail.com",
-                                                      name: "Igor Akinin",
-                                                      role: .tenant), 
+                                         property: "",
+                                         tenant: Tenant(name: "Igor Akinin", 
+                                                        email: "twinbatshole@gmail.com"),
                                          from: Date(),
                                          until: Date(),
                                          rent: 208,

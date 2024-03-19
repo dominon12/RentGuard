@@ -26,7 +26,6 @@ final class AuthManager: ObservableObject {
     }
     
     func checkAccessToken(_ token: String?) {
-        print("Check access token \(token ?? "-")")
         if token == nil {
             isAuthenticated = false
         }

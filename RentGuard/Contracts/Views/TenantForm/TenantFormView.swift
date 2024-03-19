@@ -14,8 +14,10 @@ struct TenantFormView: View {
         TextField("Name", text: $tenant.name)
             .textContentType(.name)
         
-        TextField("Email", text: $tenant.email)
-            .textContentType(.emailAddress)
+            TextField("Email", text: $tenant.email)
+                .textContentType(.emailAddress)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
         
         TextField("Government Id", text: $tenant.govId)
     }
