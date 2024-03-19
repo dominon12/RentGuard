@@ -11,7 +11,7 @@ import SwiftUI
 class NetworkManager {
     static let shared = NetworkManager()
     static let baseUrl = "http://localhost:3000/api/"
-    @AppStorage("accessToken") static var accessToken: String?
+    @AppStorage(AuthManagerDefaults.accessToken) static var accessToken: String?
     
     private init() {}
     
@@ -49,7 +49,16 @@ class NetworkManager {
         
         do {
             // send request
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            // check response status code
+            if let httpResponse = response as? HTTPURLResponse {
+                // log user out in case 401 status code received
+                if httpResponse.statusCode == 401 {
+                    accessToken = nil
+                }
+            }
+            
             return data
         } catch {
             print(error)

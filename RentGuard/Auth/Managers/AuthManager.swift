@@ -9,15 +9,26 @@ import SwiftUI
 import Auth0
 import JWTDecode
 
+struct AuthManagerDefaults {
+    static let accessToken = "accessToken"
+}
+
 final class AuthManager: ObservableObject {
     @Published var isAuthenticated = false
     let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
-    @AppStorage("accessToken") var accessToken: String?
+    @AppStorage(AuthManagerDefaults.accessToken) var accessToken: String?
     
     init() {
         isAuthenticated = credentialsManager.hasValid()
         if let accessToken {
             print(accessToken)
+        }
+    }
+    
+    func checkAccessToken(_ token: String?) {
+        print("Check access token \(token ?? "-")")
+        if token == nil {
+            isAuthenticated = false
         }
     }
     
@@ -34,6 +45,7 @@ final class AuthManager: ObservableObject {
                             await self.createUserInDb(from: credentials.idToken)
                             let isStored = self.credentialsManager.store(credentials: credentials)
                             self.accessToken = credentials.accessToken
+                            print(credentials.accessToken)
                             if isStored {
                                 self.isAuthenticated = true
                             }
@@ -73,6 +85,7 @@ final class AuthManager: ObservableObject {
                 case .success():
                     let didClear = credentialsManager.clear()
                     if didClear {
+                        accessToken = nil
                         isAuthenticated = false
                     }
                 case .failure(let error):
