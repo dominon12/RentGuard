@@ -19,9 +19,21 @@ final class PropertiesEnvironment: ObservableObject {
         isLoading = true
         do {
             properties = try await PropertiesApi.getProperties()
+            updateSelectedProperty()
         } catch {
             print("Error fetching properties", error)
         }
         isLoading = false
+    }
+    
+    func updateSelectedProperty() {
+        if let property {
+            let newProperty = properties.filter { item in
+                item._id == property._id
+            }.first
+            if let newProperty {
+                self.property = newProperty
+            }
+        }
     }
 }
