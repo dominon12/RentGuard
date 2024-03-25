@@ -8,12 +8,16 @@
 import SwiftUI
 import Observation
 
-struct PropertyForm {
-    var name = ""
+struct PropertyAddressForm {
     var address = ""
     var city = ""
     var postalCode = ""
     var country = ""
+}
+
+struct PropertyForm {
+    var name = ""
+    var address = PropertyAddressForm()
     var surface = ""
     var price = ""
     var registrationId = ""
@@ -33,10 +37,10 @@ final class PropertyFormViewModel: ObservableObject {
         
         if let property = propertiesEnv.property {
             form = PropertyForm(name: property.name,
-                                address: property.address,
-                                city: property.city ?? "",
-                                postalCode: property.postalCode ?? "",
-                                country: property.country ?? "",
+                                address: PropertyAddressForm(address: property.address.address,
+                                                             city: property.address.city ?? "", 
+                                                             postalCode: property.address.postalCode ?? "", 
+                                                             country: property.address.country ?? ""),
                                 surface: property.surface ?? "",
                                 price: property.price ?? "",
                                 registrationId: property.registrationId ?? "",
@@ -46,7 +50,7 @@ final class PropertyFormViewModel: ObservableObject {
     }
       
     var isValidForm: Bool {
-        guard !form.name.isEmpty && !form.address.isEmpty else {
+        guard !form.name.isEmpty && !form.address.address.isEmpty else {
             alert = PropertiesAlerts.formInvalid
             return false
         }
@@ -57,12 +61,12 @@ final class PropertyFormViewModel: ObservableObject {
         guard isValidForm else { return }
         
         let payload = SavePropertyDto(name: form.name,
-                                        address: form.address,
+                                      address: SaveAddressDto(address: form.address.address,                                         
+                                                              city: form.address.city.isEmpty ? nil : form.address.city,
+                                                              postalCode: form.address.postalCode.isEmpty ? nil : form.address.postalCode,
+                                                              country: form.address.country.isEmpty ? nil : form.address.country),
                                         images: form.images.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
                                         documents: form.documents.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
-                                        city: form.city.isEmpty ? nil : form.city,
-                                        postalCode: form.postalCode.isEmpty ? nil : form.postalCode,
-                                        country: form.country.isEmpty ? nil : form.country,
                                         registrationId: form.registrationId.isEmpty ? nil : form.registrationId,
                                         surface: form.surface.isEmpty ? nil : form.surface,
                                         price: form.price.isEmpty ? nil : form.price)

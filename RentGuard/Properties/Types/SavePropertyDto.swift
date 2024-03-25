@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct SavePropertyDto: Encodable {
-    var name: String
+struct SaveAddressDto: Encodable {
     var address: String
-    var images: [String]
-    var documents: [String]
     var city: String?
     var postalCode: String?
     var country: String?
+}
+
+struct SavePropertyDto: Encodable {
+    var name: String
+    var address: SaveAddressDto
+    var images: [String]
+    var documents: [String]
     var registrationId: String?
     var surface: String?
     var price: String?

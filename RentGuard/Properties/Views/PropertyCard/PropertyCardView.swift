@@ -17,7 +17,7 @@ struct PropertyCardView: View {
                     .font(.title3)
                     .fontWeight(.semibold)
                 
-                Text(property.address)
+                Text(property.fullAddress)
                     .font(.subheadline)
                 
                 Spacer()

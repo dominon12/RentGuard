@@ -73,7 +73,6 @@ class NetworkManager {
             let decodedResponse = try decoder.decode(returnType, from: data)
             return decodedResponse
         } catch {
-            print(error)
             throw NetworkError.invalidResponse
         }
     }

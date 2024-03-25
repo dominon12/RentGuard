@@ -10,7 +10,7 @@ import Foundation
 struct SaveTenantDto: Encodable {
     var name: String
     var email: String
-    var govId: String
+    var govId: String?
 }
 
 struct SaveContractDto: Encodable {
