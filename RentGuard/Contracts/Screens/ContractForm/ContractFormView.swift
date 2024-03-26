@@ -26,7 +26,7 @@ struct ContractFormView: View {
                 }
                 
                 Section(header: Text("Documents")) {
-                    DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
+                    DocumentFormView(fields: $viewModel.form.documents)
                 }
             }
             

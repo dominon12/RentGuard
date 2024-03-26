@@ -19,7 +19,7 @@ struct Property: Codable, Hashable {
     var name: String
     var address: Address
     var images: [String]
-    var documents: [String]
+    var documents: [Document]
     var registrationId: String?
     var surface: String?
     var price: String?

@@ -42,6 +42,8 @@
 		BD9DBBE12BA9C9E600EBDDCC /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBE02BA9C9E500EBDDCC /* String+Ext.swift */; };
 		BDA877232BB329D700AE9697 /* PropertyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA877222BB329D600AE9697 /* PropertyLocation.swift */; };
 		BDA877252BB32A8E00AE9697 /* PropsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA877242BB32A8E00AE9697 /* PropsMapViewModel.swift */; };
+		BDA877272BB3376500AE9697 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA877262BB3376500AE9697 /* Document.swift */; };
+		BDA8772A2BB3399100AE9697 /* DocumentsFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA877292BB3399100AE9697 /* DocumentsFormView.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -75,7 +77,7 @@
 		BDDC8EC72B9766990019199C /* PropertyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC62B9766990019199C /* PropertyFormView.swift */; };
 		BDDC8EC92B9767DB0019199C /* PropertyFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EC82B9767DB0019199C /* PropertyFormViewModel.swift */; };
 		BDDC8ECF2B9776E30019199C /* PropertyDataFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ECE2B9776E30019199C /* PropertyDataFormView.swift */; };
-		BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED12B9777790019199C /* DynamicFormView.swift */; };
+		BDDC8ED22B9777790019199C /* ImagesFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED12B9777790019199C /* ImagesFormView.swift */; };
 		BDDC8ED52B97823C0019199C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED42B97823C0019199C /* Alert.swift */; };
 		BDDC8ED82B9782A40019199C /* PropertiesAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */; };
 		BDDC8EDA2B98D7C50019199C /* SavePropertyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8ED92B98D7C50019199C /* SavePropertyDto.swift */; };
@@ -126,6 +128,8 @@
 		BD9DBBE02BA9C9E500EBDDCC /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		BDA877222BB329D600AE9697 /* PropertyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocation.swift; sourceTree = "<group>"; };
 		BDA877242BB32A8E00AE9697 /* PropsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropsMapViewModel.swift; sourceTree = "<group>"; };
+		BDA877262BB3376500AE9697 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		BDA877292BB3399100AE9697 /* DocumentsFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsFormView.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -159,7 +163,7 @@
 		BDDC8EC62B9766990019199C /* PropertyFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFormView.swift; sourceTree = "<group>"; };
 		BDDC8EC82B9767DB0019199C /* PropertyFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFormViewModel.swift; sourceTree = "<group>"; };
 		BDDC8ECE2B9776E30019199C /* PropertyDataFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDataFormView.swift; sourceTree = "<group>"; };
-		BDDC8ED12B9777790019199C /* DynamicFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormView.swift; sourceTree = "<group>"; };
+		BDDC8ED12B9777790019199C /* ImagesFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesFormView.swift; sourceTree = "<group>"; };
 		BDDC8ED42B97823C0019199C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		BDDC8ED72B9782A40019199C /* PropertiesAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAlerts.swift; sourceTree = "<group>"; };
 		BDDC8ED92B98D7C50019199C /* SavePropertyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePropertyDto.swift; sourceTree = "<group>"; };
@@ -437,6 +441,14 @@
 			path = InvoiceForm;
 			sourceTree = "<group>";
 		};
+		BDA877282BB3397B00AE9697 /* ImagesForm */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC8ED12B9777790019199C /* ImagesFormView.swift */,
+			);
+			path = ImagesForm;
+			sourceTree = "<group>";
+		};
 		BDDC8E502B8E3EB40019199C = {
 			isa = PBXGroup;
 			children = (
@@ -635,10 +647,10 @@
 		BDDC8EA62B9251B70019199C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BDDC8ED12B9777790019199C /* DynamicFormView.swift */,
 				BDDC8EDF2B98E5590019199C /* DataCardView.swift */,
 				BDDC8EA72B9251C40019199C /* LoadingView.swift */,
 				BDDC8EC32B9649EB0019199C /* EmptyState.swift */,
+				BDA877292BB3399100AE9697 /* DocumentsFormView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -681,6 +693,7 @@
 		BDDC8EB32B9640C70019199C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDA877282BB3397B00AE9697 /* ImagesForm */,
 				BDDC8EED2B98F5E80019199C /* DeleteProperty */,
 				BDDC8EE42B98F0B10019199C /* PropertyDataCard */,
 				BDDC8EE12B98F07A0019199C /* Carousel */,
@@ -729,6 +742,7 @@
 				BDA877222BB329D600AE9697 /* PropertyLocation.swift */,
 				BDDC8EBC2B9641680019199C /* Property.swift */,
 				BDDC8ED92B98D7C50019199C /* SavePropertyDto.swift */,
+				BDA877262BB3376500AE9697 /* Document.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -925,7 +939,8 @@
 				BDDC8EFB2B9A40690019199C /* DeletePropertyViewModel.swift in Sources */,
 				BD2970792B9C9BF200055870 /* ContractEnvironment.swift in Sources */,
 				BD29707B2B9CE2FD00055870 /* ContractFormViewModel.swift in Sources */,
-				BDDC8ED22B9777790019199C /* DynamicFormView.swift in Sources */,
+				BDA8772A2BB3399100AE9697 /* DocumentsFormView.swift in Sources */,
+				BDDC8ED22B9777790019199C /* ImagesFormView.swift in Sources */,
 				BD9DBBBB2BA3777500EBDDCC /* InvoicesApi.swift in Sources */,
 				BDDC8E782B8E44DF0019199C /* AuthView.swift in Sources */,
 				BD9DBBE12BA9C9E600EBDDCC /* String+Ext.swift in Sources */,
@@ -984,6 +999,7 @@
 				BDDC8ED52B97823C0019199C /* Alert.swift in Sources */,
 				BD2970732B9C94D400055870 /* DateDecodingStrategy+Ext.swift in Sources */,
 				BDDC8EAB2B9253720019199C /* PropsMapView.swift in Sources */,
+				BDA877272BB3376500AE9697 /* Document.swift in Sources */,
 				BD9DBBDA2BA4C7C100EBDDCC /* InvoiceEnvironment.swift in Sources */,
 				BD9DBBCF2BA37B4A00EBDDCC /* InvoicesListViewModel.swift in Sources */,
 				BDDC8EDD2B98E4040019199C /* PropertyDetailsView.swift in Sources */,

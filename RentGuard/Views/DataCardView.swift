@@ -10,7 +10,7 @@ import SwiftUI
 struct DataCardView<Actions: View>: View {
     let title: String?
     let data: [(String, String)]
-    let documents: [String]
+    let documents: [Document]
     let actions: (() -> Actions)?
     
     var body: some View {
@@ -48,8 +48,8 @@ struct DataCardView<Actions: View>: View {
             
             if !documents.isEmpty {
                 HStack {
-                    ForEach(documents, id: \.self) { docUrl in
-                        if let docUrl = URL(string: docUrl) {
+                    ForEach(documents, id: \.self) { doc in
+                        if let docUrl = URL(string: doc.url) {
                             Link(destination: docUrl) {
                                 VStack {
                                     Image(systemName: "doc")
@@ -57,7 +57,7 @@ struct DataCardView<Actions: View>: View {
                                     
                                     Spacer()
                                     
-                                    Text(docUrl.absoluteString)
+                                    Text(doc.name)
                                         .font(.caption)
                                         .lineLimit(1)
                                 }
@@ -92,7 +92,7 @@ struct DataCardView<Actions: View>: View {
                     ("Registration Id", "R123131231INX"),
                     ("Price", "100'000$")
                  ],
-                 documents: ["https://www.valencia-property.com/propimages/002/2155/Ribarroja450k224-12.jpeg"]) {
+                 documents: []) {
         Button {
             
         } label: {

@@ -12,7 +12,7 @@ struct FormField: Identifiable {
     var value = ""
 }
 
-struct DynamicFormView: View {
+struct ImagesFormView: View {
     var placeholder: String
     var contentType: UITextContentType?
     @Binding var fields: [FormField]
@@ -43,7 +43,7 @@ struct DynamicFormView: View {
     }
 }
 
-extension DynamicFormView {
+extension ImagesFormView {
     var canAddField: Bool {
         !fields.filter { field in
             field.value.isEmpty
@@ -66,5 +66,5 @@ extension DynamicFormView {
 }
 
 #Preview {
-    DynamicFormView(placeholder: "Form field", fields: .constant([FormField()]))
+    ImagesFormView(placeholder: "Form field", fields: .constant([FormField()]))
 }

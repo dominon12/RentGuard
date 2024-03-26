@@ -17,11 +17,11 @@ struct PropertyFormView: View {
                 PropertyDataFormView(form: $viewModel.form)
                 
                 Section(header: Text("Images")) {
-                    DynamicFormView(placeholder: "Image url", contentType: .URL, fields: $viewModel.form.images)
+                    ImagesFormView(placeholder: "Image url", contentType: .URL, fields: $viewModel.form.images)
                 }
                 
                 Section(header: Text("Documents")) {
-                    DynamicFormView(placeholder: "Document url", contentType: .URL, fields: $viewModel.form.documents)
+                    DocumentFormView(fields: $viewModel.form.documents)
                 }
             }
             

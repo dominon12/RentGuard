@@ -18,7 +18,7 @@ struct ContractForm {
     var from = Date()
     var until = Date()
     var rent = ""
-    var documents = [FormField()]
+    var documents = [DocumentFormField()]
     var deposit = ""
 }
 
@@ -41,7 +41,7 @@ final class ContractFormViewModel: ObservableObject {
                                 from: contract.from,
                                 until: contract.until,
                                 rent: String(contract.rent),
-                                documents: contract.documents.map({ docUrl in FormField(id: UUID(), value: docUrl)}),
+                                documents: contract.documents.map({ doc in DocumentFormField(id: UUID(), name: doc.name, url: doc.url)}),
                                 deposit: String(contract.deposit))
         }
     }
@@ -68,7 +68,7 @@ final class ContractFormViewModel: ObservableObject {
                                       from: form.from.ISO8601Format(),
                                       until: form.until.ISO8601Format(),
                                       rent: Float(form.rent) ?? 0,
-                                      documents: form.documents.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
+                                      documents: form.documents.filter({ field in !field.name.isEmpty && !field.url.isEmpty }).map({ field in Document(name: field.name, url: field.url) }),
                                       deposit: Float(form.deposit) ?? 0)
         
         isSaving = true

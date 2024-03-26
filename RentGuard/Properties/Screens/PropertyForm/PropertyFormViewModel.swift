@@ -22,7 +22,7 @@ struct PropertyForm {
     var price = ""
     var registrationId = ""
     var images = [FormField()]
-    var documents = [FormField()]
+    var documents = [DocumentFormField()]
 }
 
 @MainActor
@@ -45,7 +45,7 @@ final class PropertyFormViewModel: ObservableObject {
                                 price: property.price ?? "",
                                 registrationId: property.registrationId ?? "",
                                 images: property.images.map({ imageUrl in FormField(id: UUID(), value: imageUrl)}),
-                                documents: property.documents.map({ docUrl in FormField(id: UUID(), value: docUrl)}))
+                                documents: property.documents.map({ doc in DocumentFormField(id: UUID(), name: doc.name, url: doc.url)}))
         }
     }
       
@@ -61,15 +61,15 @@ final class PropertyFormViewModel: ObservableObject {
         guard isValidForm else { return }
         
         let payload = SavePropertyDto(name: form.name,
-                                      address: SaveAddressDto(address: form.address.address,                                         
+                                      address: SaveAddressDto(address: form.address.address,
                                                               city: form.address.city.isEmpty ? nil : form.address.city,
                                                               postalCode: form.address.postalCode.isEmpty ? nil : form.address.postalCode,
                                                               country: form.address.country.isEmpty ? nil : form.address.country),
-                                        images: form.images.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
-                                        documents: form.documents.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
-                                        registrationId: form.registrationId.isEmpty ? nil : form.registrationId,
-                                        surface: form.surface.isEmpty ? nil : form.surface,
-                                        price: form.price.isEmpty ? nil : form.price)
+                                      images: form.images.filter({ field in !field.value.isEmpty }).map({ field in field.value }),
+                                      documents: form.documents.filter({ field in !field.name.isEmpty && !field.url.isEmpty }).map({ field in Document(name: field.name, url: field.url) }),
+                                      registrationId: form.registrationId.isEmpty ? nil : form.registrationId,
+                                      surface: form.surface.isEmpty ? nil : form.surface,
+                                      price: form.price.isEmpty ? nil : form.price)
         
         isSaving = true
         do {

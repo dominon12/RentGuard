@@ -21,7 +21,7 @@ struct Contract: Decodable {
     var until: Date
     var rent: Float
     var deposit: Float
-    var documents: [String]
+    var documents: [Document]
 }
 
 struct ContractMockData {
