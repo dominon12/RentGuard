@@ -31,4 +31,10 @@ final class PropertiesApi: NetworkManager {
         let url = path + id
         let _ = try await NetworkManager.makeRequest(urlPath: url, withAuth: true, method: "DELETE")
     }
+    
+    static func getLocations() async throws -> [PropertyLocation] {
+        let url = path + "locations"
+        let data = try await NetworkManager.makeRequest(urlPath: url, withAuth: true)
+        return try NetworkManager.decodeResponse(data, returnType: [PropertyLocation].self)
+    }
 }

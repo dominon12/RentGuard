@@ -40,6 +40,8 @@
 		BD9DBBDD2BA4CD0700EBDDCC /* InvoiceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBDC2BA4CD0700EBDDCC /* InvoiceFormView.swift */; };
 		BD9DBBDF2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBDE2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift */; };
 		BD9DBBE12BA9C9E600EBDDCC /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DBBE02BA9C9E500EBDDCC /* String+Ext.swift */; };
+		BDA877232BB329D700AE9697 /* PropertyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA877222BB329D600AE9697 /* PropertyLocation.swift */; };
+		BDA877252BB32A8E00AE9697 /* PropsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA877242BB32A8E00AE9697 /* PropsMapViewModel.swift */; };
 		BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */; };
 		BDDC8E5F2B8E3EB40019199C /* AuthGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */; };
 		BDDC8E612B8E3EB60019199C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDC8E602B8E3EB60019199C /* Assets.xcassets */; };
@@ -63,7 +65,7 @@
 		BDDC8EA32B922E390019199C /* AlertCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EA22B922E390019199C /* AlertCardView.swift */; };
 		BDDC8EA52B9232BE0019199C /* AlertListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EA42B9232BE0019199C /* AlertListViewModel.swift */; };
 		BDDC8EA82B9251C40019199C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EA72B9251C40019199C /* LoadingView.swift */; };
-		BDDC8EAB2B9253720019199C /* PropsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EAA2B9253720019199C /* PropsMap.swift */; };
+		BDDC8EAB2B9253720019199C /* PropsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EAA2B9253720019199C /* PropsMapView.swift */; };
 		BDDC8EAE2B9253BA0019199C /* AlertsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EAD2B9253BA0019199C /* AlertsApi.swift */; };
 		BDDC8EB12B9253DB0019199C /* UserAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB02B9253DB0019199C /* UserAlert.swift */; };
 		BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8EB92B9641280019199C /* PropertyCardView.swift */; };
@@ -122,6 +124,8 @@
 		BD9DBBDC2BA4CD0700EBDDCC /* InvoiceFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFormView.swift; sourceTree = "<group>"; };
 		BD9DBBDE2BA4CD5100EBDDCC /* InvoiceFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFormViewModel.swift; sourceTree = "<group>"; };
 		BD9DBBE02BA9C9E500EBDDCC /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		BDA877222BB329D600AE9697 /* PropertyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocation.swift; sourceTree = "<group>"; };
+		BDA877242BB32A8E00AE9697 /* PropsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropsMapViewModel.swift; sourceTree = "<group>"; };
 		BDDC8E592B8E3EB40019199C /* RentGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDC8E5C2B8E3EB40019199C /* RentGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGuardApp.swift; sourceTree = "<group>"; };
 		BDDC8E5E2B8E3EB40019199C /* AuthGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGuard.swift; sourceTree = "<group>"; };
@@ -145,7 +149,7 @@
 		BDDC8EA22B922E390019199C /* AlertCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCardView.swift; sourceTree = "<group>"; };
 		BDDC8EA42B9232BE0019199C /* AlertListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewModel.swift; sourceTree = "<group>"; };
 		BDDC8EA72B9251C40019199C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		BDDC8EAA2B9253720019199C /* PropsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropsMap.swift; sourceTree = "<group>"; };
+		BDDC8EAA2B9253720019199C /* PropsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropsMapView.swift; sourceTree = "<group>"; };
 		BDDC8EAD2B9253BA0019199C /* AlertsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsApi.swift; sourceTree = "<group>"; };
 		BDDC8EB02B9253DB0019199C /* UserAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlert.swift; sourceTree = "<group>"; };
 		BDDC8EB92B9641280019199C /* PropertyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCardView.swift; sourceTree = "<group>"; };
@@ -642,7 +646,8 @@
 		BDDC8EA92B9253670019199C /* PropsMap */ = {
 			isa = PBXGroup;
 			children = (
-				BDDC8EAA2B9253720019199C /* PropsMap.swift */,
+				BDDC8EAA2B9253720019199C /* PropsMapView.swift */,
+				BDA877242BB32A8E00AE9697 /* PropsMapViewModel.swift */,
 			);
 			path = PropsMap;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 		BDDC8EBB2B9641600019199C /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				BDA877222BB329D600AE9697 /* PropertyLocation.swift */,
 				BDDC8EBC2B9641680019199C /* Property.swift */,
 				BDDC8ED92B98D7C50019199C /* SavePropertyDto.swift */,
 			);
@@ -937,6 +943,7 @@
 				BD29706E2B9C905600055870 /* Contract.swift in Sources */,
 				BDDC8E722B8E43BB0019199C /* PropertiesView.swift in Sources */,
 				BD9DBBC42BA3782F00EBDDCC /* Invoice.swift in Sources */,
+				BDA877252BB32A8E00AE9697 /* PropsMapViewModel.swift in Sources */,
 				BDDC8E982B90DB130019199C /* User.swift in Sources */,
 				BDDC8E912B8F8B820019199C /* CreateUserDto.swift in Sources */,
 				BDDC8EC02B9647460019199C /* PropertiesApi.swift in Sources */,
@@ -959,6 +966,7 @@
 				BDDC8EBA2B9641280019199C /* PropertyCardView.swift in Sources */,
 				BDDC8ECF2B9776E30019199C /* PropertyDataFormView.swift in Sources */,
 				BD9DBBAD2BA219A700EBDDCC /* ProfileFormViewModel.swift in Sources */,
+				BDA877232BB329D700AE9697 /* PropertyLocation.swift in Sources */,
 				BDDC8E5D2B8E3EB40019199C /* RentGuardApp.swift in Sources */,
 				BDDC8EEF2B98F5F10019199C /* DeletePropertyView.swift in Sources */,
 				BD9DBBCD2BA37B1700EBDDCC /* InvoicesListView.swift in Sources */,
@@ -975,7 +983,7 @@
 				BDDC8E942B8F8BC20019199C /* Role.swift in Sources */,
 				BDDC8ED52B97823C0019199C /* Alert.swift in Sources */,
 				BD2970732B9C94D400055870 /* DateDecodingStrategy+Ext.swift in Sources */,
-				BDDC8EAB2B9253720019199C /* PropsMap.swift in Sources */,
+				BDDC8EAB2B9253720019199C /* PropsMapView.swift in Sources */,
 				BD9DBBDA2BA4C7C100EBDDCC /* InvoiceEnvironment.swift in Sources */,
 				BD9DBBCF2BA37B4A00EBDDCC /* InvoicesListViewModel.swift in Sources */,
 				BDDC8EDD2B98E4040019199C /* PropertyDetailsView.swift in Sources */,

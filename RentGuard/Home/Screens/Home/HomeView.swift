@@ -23,7 +23,7 @@ struct HomeView: View {
                         .font(.title)
                         .padding([.bottom, .leading])
                     
-                    PropsMap()
+                    PropsMapView()
                     
                     AlertsListView()
                 }
