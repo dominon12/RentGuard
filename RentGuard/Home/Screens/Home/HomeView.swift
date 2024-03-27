@@ -17,7 +17,7 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     Text("Hi, \(viewModel.user?.name ?? "")")
                         .font(.largeTitle)
-                        .padding(.leading)
+                        .padding([.leading, .top])
                     
                     Text("Here's your summary")
                         .font(.title)
