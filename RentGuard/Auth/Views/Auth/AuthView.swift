@@ -20,6 +20,7 @@ struct AuthView: View {
             Text("Please authenticate to start using the app.")
                 .font(.title2)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
                 .padding()
             
             Button {
@@ -36,4 +37,5 @@ struct AuthView: View {
 
 #Preview {
     AuthView()
+        .environmentObject(AuthManager())
 }
