@@ -14,8 +14,9 @@ struct PropertiesView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                List(propertiesEnv.properties, id: \._id) { property in
+                List(propertiesEnv.properties) { property in
                     PropertyCardView(property: property)
+                        .contentShape(Rectangle())
                         .onTapGesture {
                             propertiesEnv.property = property
                         }

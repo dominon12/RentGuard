@@ -14,7 +14,8 @@ struct Address: Codable, Hashable {
     var country: String?
 }
 
-struct Property: Codable, Hashable {
+struct Property: Codable, Hashable, Identifiable {
+    var id: String { return self._id }
     var _id: String
     var name: String
     var address: Address

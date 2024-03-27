@@ -32,7 +32,7 @@ struct InvoicesListView: View {
                 EmptyState(imageName: "empty-box", message: "There are no invoices.")
             } else {
                 List {
-                    ForEach(filteredInvoices, id: \._id) { invoice in
+                    ForEach(filteredInvoices) { invoice in
                         InvoiceCellView(viewModel: InvoiceCellViewModel(invoice: invoice, invoiceEnv: invoiceEnv))
                     }
                     .onDelete(perform: { indexSet in

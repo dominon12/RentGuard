@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Invoice: Decodable {
+struct Invoice: Decodable, Identifiable {
+    var id: String { return self._id }
     var _id: String
     var type: InvoiceType
     var amount: Float
