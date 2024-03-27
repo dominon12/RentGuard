@@ -30,6 +30,8 @@ struct AlertCardView: View {
                 Text(alert.content)
                     .font(.body)
             }
+            
+            Spacer()
         }
         .padding()
         .cornerRadius(12)
