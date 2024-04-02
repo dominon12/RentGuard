@@ -18,9 +18,7 @@ final class HomeViewModel {
         isLoading = true
         do {
             user = try await AccountApi.current()
-        } catch {
-            
-        }
+        } catch {}
         isLoading = false
     }
 }

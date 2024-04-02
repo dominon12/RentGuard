@@ -11,6 +11,4 @@ struct User: Codable, Hashable {
     var _id: String
     var email: String
     var name: String
-    var role: Role
-    var govId: String?
 }
