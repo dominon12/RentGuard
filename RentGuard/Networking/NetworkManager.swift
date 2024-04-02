@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 class NetworkManager {
     static let shared = NetworkManager()
-    static let baseUrl = "http://localhost:3000/api/"
+    static let baseUrl = "https://rent-guard-api.onrender.com/api/"
     @AppStorage(AuthManagerDefaults.accessToken) static var accessToken: String?
     
     private init() {}
